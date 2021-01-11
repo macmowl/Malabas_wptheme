@@ -406,9 +406,9 @@ require ABSPATH . WPINC . '/pluggable-deprecated.php';
 wp_set_internal_encoding();
 
 // Run wp_cache_postload() if object cache is enabled and the function exists.
-if ( WP_CACHE && function_exists( 'wp_cache_postload' ) ) {
-	wp_cache_postload();
-}
+// if ( WP_CACHE && function_exists( 'wp_cache_postload' ) ) {
+// 	wp_cache_postload();
+// }
 
 /**
  * Fires once activated plugins have loaded.
