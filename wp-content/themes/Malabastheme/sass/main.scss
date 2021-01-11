@@ -21,10 +21,29 @@ body
     position: fixed;
     top: 0px;
     background-color: $black;
+    
+    li{
+        color: $white;
+        border: 1px solid $black;
+        transition: all 400ms;
+        &:hover{
+            color: black;
+            background-color: white;
+            transform: scale(1.15);
+        }
+        a{
+            margin-left: 0.2rem;
+            margin-right: 0.2rem;
+            margin-top: 5rem;
+            margin-bottom: 5rem;
+        }
+    }
+    
 }
 
 .admin-bar .menu {
-	top: 32px; /* on prend en compte le décalage */
+    top: 32px; /* on prend en compte le décalage */
+    z-index: 999;
 }
 
 .site__header

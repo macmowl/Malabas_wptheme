@@ -16,10 +16,29 @@ body {
   top: 0px;
   background-color: #292929;
 }
+.menu li {
+  color: #FFF;
+  border: 1px solid #292929;
+  -webkit-transition: all 400ms;
+  transition: all 400ms;
+}
+.menu li:hover {
+  color: black;
+  background-color: white;
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
+}
+.menu li a {
+  margin-left: 0.2rem;
+  margin-right: 0.2rem;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
 
 .admin-bar .menu {
   top: 32px;
   /* on prend en compte le décalage */
+  z-index: 999;
 }
 
 .site__header {
