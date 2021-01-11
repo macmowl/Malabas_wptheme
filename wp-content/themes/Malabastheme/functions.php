@@ -76,6 +76,11 @@ function malabas_register_post_types() {
 }
 add_action( 'init', 'malabas_register_post_types' );
 
+//Menu 
+register_nav_menus( array(
+	'main' => 'Menu Principal',
+	'footer' => 'Bas de page',
+) );
 
 // Change dashboard Articles to Recipes
 function malabas_change_post_object() {
