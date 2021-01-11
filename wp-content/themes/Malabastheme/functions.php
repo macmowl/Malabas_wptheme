@@ -68,10 +68,32 @@ function malabas_register_post_types() {
         'has_archive'   => true,
         'supports'      => array( 'title', 'editor', 'thumbnail' ),
         'menu_position' => 5,
-        'menu_icon'     => 'dashicons-carrot',
+        'menu_icon'     => 'dashicons-admin-home',
     );
 
     register_post_type( 'restaurants', $args );
 
 }
 add_action( 'init', 'malabas_register_post_types' );
+
+
+// Change dashboard Articles to Recipes
+function malabas_change_post_object() {
+    $get_post_type = get_post_type_object('post');
+    $labels = $get_post_type->labels;
+        $labels->name = 'Recipes';
+        $labels->singular_name = 'Recipe';
+        $labels->add_new = 'Add recipe';
+        $labels->add_new_item = 'Add recipe';
+        $labels->edit_item = 'Edit recipe';
+        $labels->new_item = 'Recipe';
+        $labels->view_item = 'View recipe';
+        $labels->search_items = 'Search Recipes';
+        $labels->not_found = 'No recipe found';
+        $labels->not_found_in_trash = 'No recipe found in Trash';
+        $labels->all_items = 'All Recipes';
+        $labels->menu_name = 'Recipes';
+        $labels->menu_icon = 'dashicons-carrot';
+        $labels->name_admin_bar = 'Recipes';
+}
+add_action( 'init', 'malabas_change_post_object' );
