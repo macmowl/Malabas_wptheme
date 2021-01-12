@@ -12,6 +12,15 @@ $grey : #F5F5F5;
 
 //_____________________________________________menu______________________________________
 
+a {
+    text-decoration: none;
+    color: $white;
+
+    &:hover {
+        color: $black;
+    }
+}
+
 body
 {
     font-family:"Poppins";
@@ -26,6 +35,7 @@ body
         color: $white;
         border: 1px solid $black;
         transition: all 400ms;
+        display: inline;
         &:hover{
             color: black;
             background-color: white;
@@ -46,10 +56,11 @@ body
     z-index: 999;
 }
 
-.site__header
-{
+.site__header {
     display: flex;
     flex-direction: row;
     justify-content: space-between; 
+    background-color: $black;
+    width: 100%;
     
 }
