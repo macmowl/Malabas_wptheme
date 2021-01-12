@@ -3,7 +3,8 @@
 * {
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
@@ -17,8 +18,12 @@ body {
 }
 
 .site__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   background-color: #292929;
   width: 100%;
   padding-left: 2rem;
@@ -36,11 +41,17 @@ body {
   padding-bottom: 2rem;
 }
 .menu ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 .menu ul li {
   border: 1px solid #292929;
+  -webkit-transition: all 400ms;
   transition: all 400ms;
   display: inline;
   margin-left: 1rem;
@@ -50,7 +61,8 @@ body {
   background-color: white;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
-  transform: scale(1.15);
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
 }
 .menu ul li:hover a {
   color: #292929;
@@ -59,3 +71,4 @@ body {
   color: #FFF;
   text-decoration: none;
 }
+/*# sourceMappingURL=main.css.map */
