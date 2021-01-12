@@ -11,7 +11,7 @@
 
     
     <header class="site__header">
-        <a href="<?php echo home_url( '/' ); ?>">DEV RESTAURANT</a>
+        <a class="site__header__logo" href="<?php echo home_url( '/' ); ?>">DEV RESTAURANT</a>
         <?php wp_nav_menu( array( 'theme_location' => 'main' ) ); ?>
     </header>
        

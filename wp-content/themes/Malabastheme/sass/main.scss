@@ -12,44 +12,12 @@ $grey : #F5F5F5;
 
 //_____________________________________________menu______________________________________
 
-a {
-    text-decoration: none;
-    color: $white;
-
-    &:hover {
-        color: $black;
-    }
-}
-
 body
 {
     font-family:"Poppins";
 }
 
-.menu {
-    position: fixed;
-    top: 0px;
-    background-color: $black;
-    
-    li{
-        color: $white;
-        border: 1px solid $black;
-        transition: all 400ms;
-        display: inline;
-        &:hover{
-            color: black;
-            background-color: white;
-            transform: scale(1.15);
-        }
-        a{
-            margin-left: 0.2rem;
-            margin-right: 0.2rem;
-            margin-top: 5rem;
-            margin-bottom: 5rem;
-        }
-    }
-    
-}
+
 
 .admin-bar .menu {
     top: 32px; /* on prend en compte le décalage */
@@ -58,9 +26,48 @@ body
 
 .site__header {
     display: flex;
-    flex-direction: row;
     justify-content: space-between; 
     background-color: $black;
     width: 100%;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    &__logo
+    {
+        margin-top: 2rem;
+        color: white;
+        z-index: 500;
+        text-decoration: none;
+    }
+}
+.menu {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    ul{
+        display: flex;
+        flex-direction: row;
+        li{
+            border: 1px solid $black;
+            transition: all 400ms;
+            display: inline;
+            margin-left: 1rem;
+            margin-right: 1rem;
+            &:hover{
+                background-color: white;
+                padding-left:0.5rem;
+                padding-right: 0.5rem;
+                transform: scale(1.15);
+                a{
+                    color:$black;
+                }
+            }
+            a{
+                color: $white;
+                text-decoration: none;
+                
+                
+            }
+        }
+    }
+    
     
 }
