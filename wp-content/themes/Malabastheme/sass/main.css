@@ -32,15 +32,13 @@ body {
 .site__header__logo {
   margin-top: 2rem;
   color: white;
-  z-index: 500;
   text-decoration: none;
 }
-
-.menu {
+.site__header__menu {
   padding-top: 2rem;
   padding-bottom: 2rem;
 }
-.menu ul {
+.site__header__menu ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -49,25 +47,27 @@ body {
       -ms-flex-direction: row;
           flex-direction: row;
 }
-.menu ul li {
+.site__header__menu ul li {
   border: 1px solid #292929;
   -webkit-transition: all 400ms;
   transition: all 400ms;
   display: inline;
   margin-left: 1rem;
   margin-right: 1rem;
+  list-style-type: none;
+  text-decoration: none;
 }
-.menu ul li:hover {
+.site__header__menu ul li:hover {
   background-color: white;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
   -webkit-transform: scale(1.15);
           transform: scale(1.15);
 }
-.menu ul li:hover a {
+.site__header__menu ul li:hover a {
   color: #292929;
 }
-.menu ul li a {
+.site__header__menu ul li a {
   color: #FFF;
   text-decoration: none;
 }

@@ -17,8 +17,6 @@ body
     font-family:"Poppins";
 }
 
-
-
 .admin-bar .menu {
     top: 32px; /* on prend en compte le décalage */
     z-index: 999;
@@ -35,39 +33,38 @@ body
     {
         margin-top: 2rem;
         color: white;
-        z-index: 500;
         text-decoration: none;
     }
-}
-.menu {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-    ul{
-        display: flex;
-        flex-direction: row;
-        li{
-            border: 1px solid $black;
-            transition: all 400ms;
-            display: inline;
-            margin-left: 1rem;
-            margin-right: 1rem;
-            &:hover{
-                background-color: white;
-                padding-left:0.5rem;
-                padding-right: 0.5rem;
-                transform: scale(1.15);
-                a{
-                    color:$black;
-                }
-            }
-            a{
-                color: $white;
+    &__menu
+     {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        ul{
+            display: flex;
+            flex-direction: row;
+            li{
+                border: 1px solid $black;
+                transition: all 400ms;
+                display: inline;
+                margin-left: 1rem;
+                margin-right: 1rem;
+                list-style-type: none;
                 text-decoration: none;
-                
-                
+                &:hover{
+                    background-color: white;
+                    padding-left:0.5rem;
+                    padding-right: 0.5rem;
+                    transform: scale(1.15);
+                    a{
+                        color:$black;
+                    }
+                }
+                a{
+                    color: $white;
+                    text-decoration: none;   
+                }
             }
         }
     }
     
-    
-}
+}  
