@@ -44,10 +44,6 @@ function malabas_register_assets() {
 }
 add_action( 'wp_enqueue_scripts', 'malabas_register_assets' );
 
-register_nav_menus( array(
-    'main'      => 'Menu principal',
-    'footer'    => 'Bas de page',
-) );
 
 function malabas_register_post_types() {
 
