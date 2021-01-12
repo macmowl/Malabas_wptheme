@@ -28,7 +28,7 @@ function malabas_register_assets() {
     
     // Déclarer style.css à la racine du thème
     wp_enqueue_style( 
-        'css',
+        'malabas',
         get_stylesheet_uri(), 
         array(), 
         '1.0'
@@ -36,7 +36,7 @@ function malabas_register_assets() {
 
     // Déclarer un autre fichier CSS
     wp_enqueue_style( 
-        'css', 
+        'malabas main', 
         get_template_directory_uri() . '/css/main.css',
         array(), 
         '1.0'
@@ -102,3 +102,10 @@ function malabas_change_post_object() {
         $labels->name_admin_bar = 'Recipes';
 }
 add_action( 'init', 'malabas_change_post_object' );
+
+//Delete comments menu
+function malabas_remove_menu_pages() {
+	remove_menu_page( 'tools.php' );
+    remove_menu_page( 'edit-comments.php' );
+}
+add_action( 'admin_menu', 'malabas_remove_menu_pages' );

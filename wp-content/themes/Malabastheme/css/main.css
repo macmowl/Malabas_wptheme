@@ -7,6 +7,15 @@
           box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+  color: #FFF;
+}
+
+a:hover {
+  color: #292929;
+}
+
 body {
   font-family: "Poppins";
 }
