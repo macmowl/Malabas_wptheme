@@ -15,6 +15,7 @@ $grey : #F5F5F5;
 body
 {
     font-family:"Poppins";
+    max-width: 120rem;
 }
 
 .admin-bar .menu {
@@ -26,9 +27,8 @@ body
     display: flex;
     justify-content: space-between; 
     background-color: $black;
-    width: 100%;
-    padding-left: 2rem;
-    padding-right: 2rem;
+   
+    
     &__logo
     {
         margin-top: 2rem;
@@ -80,43 +80,63 @@ body
     flex: 25%;
     .footer__intro
     {
+        margin-right: 5rem;
         &__pub
         {
-            width: 25rem;
+            width: 15rem;
         }
         &__media
         {
             display: flex;
             flex-wrap: wrap; 
+            img{
+                margin-right: 2rem;
+            }
         }
     }
-
-    .footer__hours__section-1, .footer__hours__section-2, .footer__hours__section-3, .footer__hours__section-4
+    .footer__hours
     {
-        display: flex;
-        flex-direction: row;
-    }
+        &__section-1, &__section-2, &__section-3, &__section-4
+        {
+            display: flex;
+            flex-direction: row;
+            margin-right: 5rem;
+        }
+        
+        img{
+            margin-right: 2rem;
+        }
 
-    .footer__hours__line
-    {
-        margin-left: 1rem;
-        margin-right: 0.2rem;
-        width: 5rem;
-        border-bottom: 1px solid $white;
-    }
-
-    .footer__contact__phone, .footer__contact__address, .footer__contact__mail
-    {
-        display: flex;
-        flex-direction: row;
     }
     
-    
+    .footer__contact
+    {
+        width: 50rem;
+        &__phone, &__address, &__mail
+        {
+            display: flex;
+            flex-direction: row;
+            img {
+                margin-right: 1rem;
+            };
+           
+        }
+        &__address__street
+        {
+            margin-top: 1rem;
+        }
+
+        &__address__svg
+        {
+            margin-top: -2.5rem;
+        }
+        
+    }
+
     .insta
     {
         width: 1.5rem;
         height: auto; 
-    }
-    
+    }  
     
 }
