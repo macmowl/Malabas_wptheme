@@ -1,8 +1,68 @@
-html {
-  color: black;
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-h1 {
-  font-size: 9rem;
-  font-weight: 100;
+a {
+  text-decoration: none;
+  color: #FFF;
+}
+a:hover {
+  color: #292929;
+}
+
+body {
+  font-family: "Poppins";
+}
+
+.menu {
+  position: fixed;
+  top: 0px;
+  background-color: #292929;
+}
+.menu li {
+  color: #FFF;
+  border: 1px solid #292929;
+  transition: all 400ms;
+  display: inline;
+}
+.menu li:hover {
+  color: black;
+  background-color: white;
+  transform: scale(1.15);
+}
+.menu li a {
+  margin-left: 0.2rem;
+  margin-right: 0.2rem;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+.admin-bar .menu {
+  top: 32px;
+  /* on prend en compte le décalage */
+  z-index: 999;
+}
+
+.site__header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #292929;
+  width: 100%;
+}
+
+.hero {
+  width: 100%;
+  height: 87vh;
+  text-align: left;
+  color: white;
+  overflow: hidden;
+  display: inline-block;
+  background-size: cover;
+  background-position: bottom center;
+  padding: 4rem 3.2rem 0 3.2rem;
 }
