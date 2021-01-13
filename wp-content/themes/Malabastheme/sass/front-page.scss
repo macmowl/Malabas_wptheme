@@ -11,3 +11,42 @@
     background-position: bottom center;
     padding: 4rem 3.2rem 0 3.2rem;
 }
+
+.usps {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    padding-bottom: 60px;
+
+    .usp {
+        width: 75%;
+        margin: 0 auto;
+        margin-top: 60px;
+
+        p {
+            display: none;
+        }
+    }
+}
+
+.intro {
+    width: 100%;
+    padding-bottom: 60px;
+
+    &__img-wrapper {
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &__info {
+        padding: 0 3.2rem 0 3.2rem;
+
+        h2 {
+            
+        }
+    }
+}
