@@ -61,8 +61,6 @@ body
             a{
                 color: $white;
                 text-decoration: none;   
-<<<<<<< HEAD
-=======
             }
         }
         
@@ -73,6 +71,7 @@ body
 
 .site__footer
 {
+    padding-top: 2rem;
     padding-left: 2rem;
     padding-right: 2rem;
     background-color: black;
@@ -83,9 +82,16 @@ body
     .footer__intro
     {
         margin-right: 5rem;
+        &__logo
+        {
+            font-size: 1.4rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
         &__pub
         {
             width: 15rem;
+            color: white;
         }
         &__media
         {
@@ -93,106 +99,53 @@ body
             flex-wrap: wrap; 
             img{
                 margin-right: 2rem;
->>>>>>> dev
             }
         }
-        
+      
+      
     }
-    
-}  
-//_________________________________________footer____________________________
-
-.site__footer
-{
-    padding-left: 2rem;
-    padding-right: 2rem;
-    background-color: black;
-    color: white;
-    display: flex;
-    flex-wrap:wrap;
-    flex: 25%;
-    .footer__intro
+    .footer__open__hours__repeater
     {
-        &__pub
-        {
-            width: 25rem;
-        }
-        &__media
-        {
-            display: flex;
-            flex-wrap: wrap; 
-        }
+        margin-bottom: 1rem;
+        font-weight: bold;
     }
-
-    .footer__hours__section-1, .footer__hours__section-2, .footer__hours__section-3, .footer__hours__section-4
+    .footer__open__hours__repeater__line
     {
-        display: flex;
-        flex-direction: row;
-    }
-
-    .footer__hours__line
-    {
-        margin-left: 1rem;
-        margin-right: 0.2rem;
-        width: 5rem;
         border-bottom: 1px solid $white;
+        width: 30%;
+        
     }
-
-    .footer__contact__phone, .footer__contact__address, .footer__contact__mail
+    .footer__open__hours__flex
     {
         display: flex;
         flex-direction: row;
+        justify-content: space-between;
+        flex: 33%;
+        width: 20rem;
     }
-    
-    
-    .insta
-    {
-        width: 1.5rem;
-        height: auto; 
-    }
-    .footer__hours
-    {
-        &__section-1, &__section-2, &__section-3, &__section-4
-        {
-            display: flex;
-            flex-direction: row;
-            margin-right: 5rem;
-        }
-        
-        img{
-            margin-right: 2rem;
-        }
-
-    }
-    
     .footer__contact
     {
-        width: 50rem;
-        &__phone, &__address, &__mail
-        {
-            display: flex;
-            flex-direction: row;
-            img {
-                margin-right: 1rem;
-            };
-           
-        }
-        &__address__street
-        {
-            margin-top: 1rem;
-        }
-
-        &__address__svg
-        {
-            margin-top: -2.5rem;
-        }
+        margin-left: 2rem;
         
     }
-
-    .insta
+    .footer__contact__phone
     {
-        width: 1.5rem;
-        height: auto; 
-    }  
-    
-}
+        margin-top: 1rem;
+    }
+    .footer__contact__adress, .footer__contact__phone
+    {
+        display: flex;
+        flex-direction:row;
+        flex-wrap:wrap;
+        &__icone
+        {
+            margin-right: 2rem;
+        };
+    }
+    .footer__contact__adress__restaurant
+    {
+        margin-top: 1rem;
+    }
+}  
+
+      
