@@ -39,32 +39,84 @@ body
      {
         padding-top: 2rem;
         padding-bottom: 2rem;
-        ul{
-            display: flex;
-            flex-direction: row;
-            li{
-                border: 1px solid $black;
-                transition: all 400ms;
-                display: inline;
-                margin-left: 1rem;
-                margin-right: 1rem;
-                list-style-type: none;
-                text-decoration: none;
-                &:hover{
-                    background-color: white;
-                    padding-left:0.5rem;
-                    padding-right: 0.5rem;
-                    transform: scale(1.15);
-                    a{
-                        color:$black;
-                    }
-                }
+        display: flex;
+        flex-direction: row;
+        li{
+            border: 1px solid $black;
+            transition: all 400ms;
+            display: inline;
+            margin-left: 1rem;
+            margin-right: 1rem;
+            list-style-type: none;
+            text-decoration: none;
+            &:hover{
+                background-color: white;
+                padding-left:0.5rem;
+                padding-right: 0.5rem;
+                transform: scale(1.15);
                 a{
-                    color: $white;
-                    text-decoration: none;   
+                    color:$black;
                 }
             }
+            a{
+                color: $white;
+                text-decoration: none;   
+            }
         }
+        
     }
     
 }  
+//_________________________________________footer____________________________
+
+.site__footer
+{
+    padding-left: 2rem;
+    padding-right: 2rem;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-wrap:wrap;
+    flex: 25%;
+    .footer__intro
+    {
+        &__pub
+        {
+            width: 25rem;
+        }
+        &__media
+        {
+            display: flex;
+            flex-wrap: wrap; 
+        }
+    }
+
+    .footer__hours__section-1, .footer__hours__section-2, .footer__hours__section-3, .footer__hours__section-4
+    {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .footer__hours__line
+    {
+        margin-left: 1rem;
+        margin-right: 0.2rem;
+        width: 5rem;
+        border-bottom: 1px solid $white;
+    }
+
+    .footer__contact__phone, .footer__contact__address, .footer__contact__mail
+    {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    
+    .insta
+    {
+        width: 1.5rem;
+        height: auto; 
+    }
+    
+    
+}
