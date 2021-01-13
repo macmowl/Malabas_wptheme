@@ -15,6 +15,7 @@ $grey : #F5F5F5;
 body
 {
     font-family:"Poppins";
+    max-width: 120rem;
 }
 
 .admin-bar .menu {
@@ -26,9 +27,8 @@ body
     display: flex;
     justify-content: space-between; 
     background-color: $black;
-    width: 100%;
-    padding-left: 2rem;
-    padding-right: 2rem;
+   
+    
     &__logo
     {
         margin-top: 2rem;
@@ -61,6 +61,39 @@ body
             a{
                 color: $white;
                 text-decoration: none;   
+<<<<<<< HEAD
+=======
+            }
+        }
+        
+    }
+    
+}  
+//_________________________________________footer____________________________
+
+.site__footer
+{
+    padding-left: 2rem;
+    padding-right: 2rem;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-wrap:wrap;
+    flex: 25%;
+    .footer__intro
+    {
+        margin-right: 5rem;
+        &__pub
+        {
+            width: 15rem;
+        }
+        &__media
+        {
+            display: flex;
+            flex-wrap: wrap; 
+            img{
+                margin-right: 2rem;
+>>>>>>> dev
             }
         }
         
@@ -117,6 +150,49 @@ body
         width: 1.5rem;
         height: auto; 
     }
+    .footer__hours
+    {
+        &__section-1, &__section-2, &__section-3, &__section-4
+        {
+            display: flex;
+            flex-direction: row;
+            margin-right: 5rem;
+        }
+        
+        img{
+            margin-right: 2rem;
+        }
+
+    }
     
+    .footer__contact
+    {
+        width: 50rem;
+        &__phone, &__address, &__mail
+        {
+            display: flex;
+            flex-direction: row;
+            img {
+                margin-right: 1rem;
+            };
+           
+        }
+        &__address__street
+        {
+            margin-top: 1rem;
+        }
+
+        &__address__svg
+        {
+            margin-top: -2.5rem;
+        }
+        
+    }
+
+    .insta
+    {
+        width: 1.5rem;
+        height: auto; 
+    }  
     
 }

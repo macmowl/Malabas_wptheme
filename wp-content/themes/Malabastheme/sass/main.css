@@ -9,6 +9,7 @@
 
 body {
   font-family: "Poppins";
+  max-width: 120rem;
 }
 
 .admin-bar .menu {
@@ -25,9 +26,6 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   background-color: #292929;
-  width: 100%;
-  padding-left: 2rem;
-  padding-right: 2rem;
 }
 .site__header__logo {
   margin-top: 2rem;
@@ -84,8 +82,16 @@ body {
       -ms-flex: 25%;
           flex: 25%;
 }
+<<<<<<< HEAD
 .site__footer .footer__intro__pub {
   width: 25rem;
+=======
+.site__footer .footer__intro {
+  margin-right: 5rem;
+}
+.site__footer .footer__intro__pub {
+  width: 15rem;
+>>>>>>> dev
 }
 .site__footer .footer__intro__media {
   display: -webkit-box;
@@ -94,6 +100,12 @@ body {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
+<<<<<<< HEAD
+=======
+.site__footer .footer__intro__media img {
+  margin-right: 2rem;
+}
+>>>>>>> dev
 .site__footer .footer__hours__section-1, .site__footer .footer__hours__section-2, .site__footer .footer__hours__section-3, .site__footer .footer__hours__section-4 {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -102,12 +114,22 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+<<<<<<< HEAD
 }
 .site__footer .footer__hours__line {
   margin-left: 1rem;
   margin-right: 0.2rem;
   width: 5rem;
   border-bottom: 1px solid #FFF;
+=======
+  margin-right: 5rem;
+}
+.site__footer .footer__hours img {
+  margin-right: 2rem;
+}
+.site__footer .footer__contact {
+  width: 50rem;
+>>>>>>> dev
 }
 .site__footer .footer__contact__phone, .site__footer .footer__contact__address, .site__footer .footer__contact__mail {
   display: -webkit-box;
@@ -118,6 +140,18 @@ body {
       -ms-flex-direction: row;
           flex-direction: row;
 }
+<<<<<<< HEAD
+=======
+.site__footer .footer__contact__phone img, .site__footer .footer__contact__address img, .site__footer .footer__contact__mail img {
+  margin-right: 1rem;
+}
+.site__footer .footer__contact__address__street {
+  margin-top: 1rem;
+}
+.site__footer .footer__contact__address__svg {
+  margin-top: -2.5rem;
+}
+>>>>>>> dev
 .site__footer .insta {
   width: 1.5rem;
   height: auto;
