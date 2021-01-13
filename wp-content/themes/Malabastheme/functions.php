@@ -54,10 +54,6 @@ function malabas_register_assets() {
 }
 add_action( 'wp_enqueue_scripts', 'malabas_register_assets' );
 
-register_nav_menus( array(
-    'main'      => 'Menu principal',
-    'footer'    => 'Bas de page',
-) );
 
 function malabas_register_post_types() {
 
@@ -130,7 +126,6 @@ function disable_gutenberg_editor()
 return false;
 }
 
-
 // Disable content editor from frontpage
 add_action('admin_head', 'remove_content_editor');
 
@@ -140,4 +135,11 @@ function remove_content_editor()
     {
         remove_post_type_support('page', 'editor');
     }
+}
+
+// What is that line? 
+if( function_exists('acf_add_options_page') ) {
+	
+	acf_add_options_page();
+	
 }
