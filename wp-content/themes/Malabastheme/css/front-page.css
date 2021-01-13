@@ -66,3 +66,31 @@ body {
   background-position: bottom center;
   padding: 4rem 3.2rem 0 3.2rem;
 }
+
+.usps {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
+  padding-bottom: 60px;
+}
+.usps .usp {
+  width: 75%;
+  margin: 0 auto;
+  margin-top: 60px;
+}
+.usps .usp p {
+  display: none;
+}
+
+.intro {
+  width: 100%;
+  padding-bottom: 60px;
+}
+.intro__img-wrapper img {
+  width: 100%;
+  height: auto;
+}
+.intro__info {
+  padding: 0 3.2rem 0 3.2rem;
+}
