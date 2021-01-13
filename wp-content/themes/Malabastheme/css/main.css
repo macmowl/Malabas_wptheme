@@ -32,12 +32,10 @@ body {
 .site__header__menu {
   padding-top: 2rem;
   padding-bottom: 2rem;
-}
-.site__header__menu ul {
   display: flex;
   flex-direction: row;
 }
-.site__header__menu ul li {
+.site__header__menu li {
   border: 1px solid #292929;
   transition: all 400ms;
   display: inline;
@@ -46,16 +44,51 @@ body {
   list-style-type: none;
   text-decoration: none;
 }
-.site__header__menu ul li:hover {
+.site__header__menu li:hover {
   background-color: white;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
   transform: scale(1.15);
 }
-.site__header__menu ul li:hover a {
+.site__header__menu li:hover a {
   color: #292929;
 }
-.site__header__menu ul li a {
+.site__header__menu li a {
   color: #FFF;
   text-decoration: none;
+}
+
+.site__footer {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  flex: 25%;
+}
+.site__footer .footer__intro__pub {
+  width: 25rem;
+}
+.site__footer .footer__intro__media {
+  display: flex;
+  flex-wrap: wrap;
+}
+.site__footer .footer__hours__section-1, .site__footer .footer__hours__section-2, .site__footer .footer__hours__section-3, .site__footer .footer__hours__section-4 {
+  display: flex;
+  flex-direction: row;
+}
+.site__footer .footer__hours__line {
+  margin-left: 1rem;
+  margin-right: 0.2rem;
+  width: 5rem;
+  border-bottom: 1px solid #FFF;
+}
+.site__footer .footer__contact__phone, .site__footer .footer__contact__address, .site__footer .footer__contact__mail {
+  display: flex;
+  flex-direction: row;
+}
+.site__footer .insta {
+  width: 1.5rem;
+  height: auto;
 }
