@@ -2,6 +2,9 @@
 // Ajouter la prise en charge des images mises en avant
 add_theme_support( 'post-thumbnails' );
 
+// Définir la taille des images mises en avant
+set_post_thumbnail_size( 2000, 400, true );
+
 // Ajouter automatiquement le titre du site dans l'en-tête du site
 add_theme_support( 'title-tag' );
 
@@ -109,3 +112,13 @@ function malabas_remove_menu_pages() {
     remove_menu_page( 'edit-comments.php' );
 }
 add_action( 'admin_menu', 'malabas_remove_menu_pages' );
+
+// Add image size
+add_image_size( 'square', 256, 256, false);
+
+// Disable Gutenberg editor
+add_filter("use_block_editor_for_post_type", "disable_gutenberg_editor");
+function disable_gutenberg_editor()
+{
+return false;
+}
