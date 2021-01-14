@@ -1,15 +1,24 @@
-@use 'main';
+@import 'reset';
 
 .hero {
     width: 100%;
     height: 87vh;
     text-align: left;
-    color: white;
+    color: $white;
     overflow: hidden;
     display: inline-block;
     background-size: cover;
     background-position: bottom center;
-    padding: 4rem 3.2rem 0 3.2rem;
+    padding: 7rem 3.2rem 0 3.2rem;
+
+    &__title {
+        color: $white;
+        font-size: 4rem;
+    }
+
+    &__subtitle {
+        color: $white;
+    }
 }
 
 .usps {
@@ -18,6 +27,10 @@
     text-align: center;
     width: 100%;
     padding-bottom: 60px;
+
+    @include extralarge {
+        flex-direction: row;
+    }
 
     .usp {
         width: 75%;
@@ -44,9 +57,18 @@
 
     &__info {
         padding: 0 3.2rem 0 3.2rem;
+        margin-top: 30px;
 
-        h2 {
-            
+        &__title {
+            text-transform: uppercase;
+        }
+
+        &__subtitle {
+            font-size: 1.3rem;
+        }
+
+        &__signature {
+            font-size: 2rem;
         }
     }
 }
