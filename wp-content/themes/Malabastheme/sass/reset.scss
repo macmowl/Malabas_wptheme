@@ -20,19 +20,19 @@ $breakpoints: (
 }
 
 @mixin medium {
-    @media screen and (max-width: map-get($breakpoints, medium)) {
+    @media screen and (min-width: map-get($breakpoints, medium)) {
         @content;
     }
 }
 
 @mixin large {
-    @media screen and (max-width: map-get($breakpoints, large)) {
+    @media screen and (min-width: map-get($breakpoints, large)) {
         @content;
     }
 }
 
 @mixin extralarge {
-    @media screen and (max-width: map-get($breakpoints, extralarge)) {
+    @media screen and (min-width: map-get($breakpoints, extralarge)) {
         @content;
     }
 }

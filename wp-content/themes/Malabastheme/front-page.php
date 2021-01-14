@@ -6,11 +6,11 @@
         if( $image_id ) {
     ?>
     <section class="hero" style="background-image: url('<?= $image_id['url']?>');">
-        
-        <H2 class="hero__subtitle"><?php the_field( 'hero-subtitle' ); ?></h2>    
-        <h1 class="hero__title"><?php the_field( 'hero-title' ); ?></h1>
-        <p class="hero__link"><a href="<?php the_field( 'hero-link' ); ?>"><?php the_field( 'hero-label_link' ); ?></a></p>
-        
+        <div class="hero__wrapper">
+            <H2 class="hero__wrapper__subtitle"><?php the_field( 'hero-subtitle' ); ?></h2>    
+            <h1 class="hero__wrapper__title"><?php the_field( 'hero-title' ); ?></h1>
+            <p class="hero__wrapper__link"><a href="<?php the_field( 'hero-link' ); ?>"><?php the_field( 'hero-label_link' ); ?></a></p>
+        </div>
     </section>
     <?php
         }
