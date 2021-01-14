@@ -15,6 +15,39 @@
     <?php
         }
     ?>
+
+    <section class="usps">
+        <div class="usp" id="usp1">
+            <?php
+                $image_id = get_field( 'hero_icon' );
+                if( $image_id ) {
+                    echo wp_get_attachment_image( $image_id['ID'], 'medium' );
+                }
+            ?>
+            <h3><?php the_field( 'hero_title' ); ?></h3>
+            <p><?php the_field( 'hero_description' ); ?></p>
+        </div>
+        <div class="usp" id="usp2">
+            <?php
+                $image_id = get_field( 'hero_icon2' );
+                if( $image_id ) {
+                    echo wp_get_attachment_image( $image_id['ID'], 'medium' );
+                }
+            ?>
+            <h3><?php the_field( 'hero_title2' ); ?></h3>
+            <p><?php the_field( 'hero_description2' ); ?></p>
+        </div>
+        <div class="usp" id="usp3">
+            <?php
+                $image_id = get_field( 'hero_icon3' );
+                if( $image_id ) {
+                    echo wp_get_attachment_image( $image_id['ID'], 'medium' );
+                }
+            ?>
+            <h3><?php the_field( 'hero_title3' ); ?></h3>
+            <p><?php the_field( 'hero_description3' ); ?></p>
+        </div>
+    </section>
     
     <section class="intro">  
         <div class="intro__img-wrapper">
@@ -26,7 +59,7 @@
             ?>
         </div> 
         <div class="intro__info">
-            <h2><?php the_field( 'intro_title' ); ?></h>
+            <h2 class="firstWord"><?php the_field( 'intro_title' ); ?></h>
             <H3><?php the_field( 'intro_subtitle' ); ?></h3> 
             <p><?php the_field( 'intro_content' ); ?></p>
             <h4><?php the_field( 'intro_signature' ); ?></h4>
@@ -91,9 +124,8 @@
     </section>
 
     <section class="latest-recipes">
-
+                WIP
     </section>
-
     
     <?php endwhile; endif; ?>
 <?php get_footer(); ?>
