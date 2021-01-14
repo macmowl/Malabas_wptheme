@@ -20,8 +20,6 @@ body {
 .site__header {
   display: flex;
   justify-content: space-between;
-  background-color: #292929;
-  opacity: 0.5;
 }
 .site__header__logo {
   margin-top: 2rem;
