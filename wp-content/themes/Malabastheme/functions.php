@@ -51,10 +51,19 @@ function malabas_register_assets() {
         array(), 
         '1.0'
     );
+    //Déclarer dashicon du menu 
+    wp_enqueue_style( 'dashicons' );
 
     wp_enqueue_style( 
         'malabas frontpage', 
         get_template_directory_uri() . '/css/front-page.css',
+        array(), 
+        '1.0'
+    );
+
+    wp_enqueue_style( 
+        'malabas single', 
+        get_template_directory_uri() . '/css/single.css',
         array(), 
         '1.0'
     );
@@ -93,7 +102,7 @@ add_action( 'init', 'malabas_register_post_types' );
 register_nav_menus( array(
 	'main' => 'Menu Principal',
 	'footer' => 'Bas de page',
-) );
+));
 
 // Change dashboard Articles to Recipes
 function malabas_change_post_object() {
@@ -147,6 +156,25 @@ function remove_content_editor()
 // What is that line? 
 if( function_exists('acf_add_options_page') ) {
 	
-	acf_add_options_page();
+	acf_add_options_page(array(
+		'page_title' 	=> 'Theme General Settings',
+		'menu_title'	=> 'Theme Settings',
+		'menu_slug' 	=> 'theme-general-settings',
+		'capability'	=> 'edit_posts',
+		'redirect'		=> false
+	));
+	
+	acf_add_options_sub_page(array(
+		'page_title' 	=> 'Theme Header Settings',
+		'menu_title'	=> 'Header',
+		'parent_slug'	=> 'theme-general-settings',
+	));
+	
+	acf_add_options_sub_page(array(
+		'page_title' 	=> 'Theme Footer Settings',
+		'menu_title'	=> 'Footer',
+		'parent_slug'	=> 'theme-general-settings',
+	));
 	
 }
+	
