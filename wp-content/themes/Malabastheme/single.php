@@ -1,13 +1,16 @@
 <?php get_header(); ?>
-<div class="section_gray">
-    <h1 class="test"><?php the_field("title"); ?></h1>
-    <p><?php the_field("text"); ?></p>
-</div>
+<section class="section_gray">
+    <h1 class="single__Title"><?php the_field("title"); ?></h1>
+    <p class="single__Title--paragraphe"><?php the_field("text"); ?></p>
+    <div class="single__Title--Boximage">
+        <img class="single__Title--image" src="<?php echo get_field("image")["url"]; ?>" alt="">
+    </div>
+</section>
 
 <section>
 
 
-    <img width=600rem src="<?php echo get_field("image")["url"]; ?>" alt="">
+    
 </section>
 
 <section>

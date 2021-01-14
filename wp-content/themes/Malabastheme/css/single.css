@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 * {
   padding: 0;
@@ -6,6 +5,23 @@
   box-sizing: border-box;
 }
 
-.test {
-  color: red;
+.section_gray {
+  background-color: #292929;
+  height: 20rem;
+  width: 100vw;
+}
+
+.single__Title {
+  color: white;
+  margin-left: 15rem;
+  margin-bottom: 3rem;
+}
+.single__Title--paragraphe {
+  margin-left: 15rem;
+  color: white;
+}
+.single__Title--Boximage {
+  margin-left: 15rem;
+  background-color: greenyellow;
+  height: 15rem;
 }
