@@ -44,6 +44,8 @@ function malabas_register_assets() {
         array(), 
         '1.0'
     );
+    //Déclarer dashicon du menu 
+    wp_enqueue_style( 'dashicons' );
 }
 add_action( 'wp_enqueue_scripts', 'malabas_register_assets' );
 
@@ -79,7 +81,7 @@ add_action( 'init', 'malabas_register_post_types' );
 register_nav_menus( array(
 	'main' => 'Menu Principal',
 	'footer' => 'Bas de page',
-) );
+));
 
 // Change dashboard Articles to Recipes
 function malabas_change_post_object() {
