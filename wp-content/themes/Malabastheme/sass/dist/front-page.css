@@ -45,7 +45,7 @@ body {
   width: 100%;
   height: 87vh;
   text-align: left;
-  color: white;
+  color: #FFF;
   overflow: hidden;
   display: inline-block;
   background-size: cover;
@@ -53,11 +53,11 @@ body {
   padding: 7rem 3.2rem 0 3.2rem;
 }
 .hero__title {
-  color: white;
+  color: #FFF;
   font-size: 4rem;
 }
 .hero__subtitle {
-  color: white;
+  color: #FFF;
 }
 
 .usps {
@@ -66,6 +66,11 @@ body {
   text-align: center;
   width: 100%;
   padding-bottom: 60px;
+}
+@media screen and (max-width: 1200px) {
+  .usps {
+    flex-direction: row;
+  }
 }
 .usps .usp {
   width: 75%;

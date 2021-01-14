@@ -1,0 +1,153 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 62.5%;
+  color: #292929;
+}
+
+p, a {
+  font-size: 1.6rem;
+  margin-bottom: 1.6rem;
+}
+
+a {
+  color: #FFF;
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 3.2rem;
+  margin-bottom: 3.2rem;
+}
+
+h2 {
+  font-size: 2.8rem;
+  margin-bottom: 2.8rem;
+}
+
+h3 {
+  font-size: 2.4rem;
+  margin-bottom: 2.4rem;
+}
+
+h4 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+body {
+  line-height: 1;
+}
+
+body {
+  font-family: "Poppins";
+}
+
+.admin-bar .menu {
+  top: 32px;
+  /* on prend en compte le décalage */
+  z-index: 999;
+}
+
+.site__header {
+  display: flex;
+  justify-content: space-between;
+}
+.site__header__logo {
+  margin-top: 2rem;
+  color: white;
+  text-decoration: none;
+}
+.site__header__menu {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  display: flex;
+  flex-direction: row;
+}
+.site__header__menu li {
+  border: 1px solid #292929;
+  transition: all 400ms;
+  display: inline;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  list-style-type: none;
+  text-decoration: none;
+}
+.site__header__menu li:hover {
+  background-color: white;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  transform: scale(1.15);
+}
+.site__header__menu li:hover a {
+  color: #292929;
+}
+.site__header__menu li a {
+  color: #FFF;
+  text-decoration: none;
+}
+
+.site__footer {
+  padding-top: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  flex: 25%;
+}
+.site__footer .footer__intro {
+  margin-right: 5rem;
+}
+.site__footer .footer__intro__logo {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+.site__footer .footer__intro__pub {
+  width: 15rem;
+  color: white;
+}
+.site__footer .footer__intro__media {
+  display: flex;
+  flex-wrap: wrap;
+}
+.site__footer .footer__intro__media img {
+  margin-right: 2rem;
+}
+.site__footer .footer__open__hours__repeater {
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+.site__footer .footer__open__hours__repeater__line {
+  border-bottom: 1px solid #FFF;
+  width: 30%;
+}
+.site__footer .footer__open__hours__flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex: 33%;
+  width: 20rem;
+}
+.site__footer .footer__contact {
+  margin-left: 2rem;
+}
+.site__footer .footer__contact__phone {
+  margin-top: 1rem;
+}
+.site__footer .footer__contact__adress, .site__footer .footer__contact__phone {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.site__footer .footer__contact__adress__icone, .site__footer .footer__contact__phone__icone {
+  margin-right: 2rem;
+}
+.site__footer .footer__contact__adress__restaurant {
+  margin-top: 1rem;
+}
