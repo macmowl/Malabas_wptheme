@@ -39,6 +39,13 @@ function malabas_register_assets() {
 
     // Déclarer un autre fichier CSS
     wp_enqueue_style( 
+        'malabas reset', 
+        get_template_directory_uri() . '/css/reset.css',
+        array(), 
+        '1.0'
+    );
+
+    wp_enqueue_style( 
         'malabas main', 
         get_template_directory_uri() . '/css/main.css',
         array(), 
@@ -57,7 +64,7 @@ add_action( 'wp_enqueue_scripts', 'malabas_register_assets' );
 
 function malabas_register_post_types() {
 
-    //Custom post type portfolio
+    //Custom post type Restaurant
     $labels = array(
         'name'          => 'Restaurants',
         'all_items'     => 'All restaurants', //affiché dans le sous-menu
