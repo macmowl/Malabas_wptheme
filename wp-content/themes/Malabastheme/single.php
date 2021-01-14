@@ -1,7 +1,11 @@
-<section>
-    <h1><?php the_field("title"); ?></h1>
-
+<?php get_header(); ?>
+<div class="section_gray">
+    <h1 class="test"><?php the_field("title"); ?></h1>
     <p><?php the_field("text"); ?></p>
+</div>
+
+<section>
+
 
     <img width=600rem src="<?php echo get_field("image")["url"]; ?>" alt="">
 </section>
@@ -39,3 +43,4 @@
         <?php endif;
     ?>
 </section>
+<?php get_footer(); ?>
