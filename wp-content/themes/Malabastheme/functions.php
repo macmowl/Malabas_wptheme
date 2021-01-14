@@ -46,6 +46,13 @@ function malabas_register_assets() {
     );
     //Déclarer dashicon du menu 
     wp_enqueue_style( 'dashicons' );
+
+    wp_enqueue_style( 
+        'malabas frontpage', 
+        get_template_directory_uri() . '/css/front-page.css',
+        array(), 
+        '1.0'
+    );
 }
 add_action( 'wp_enqueue_scripts', 'malabas_register_assets' );
 
@@ -112,7 +119,7 @@ function malabas_remove_menu_pages() {
 add_action( 'admin_menu', 'malabas_remove_menu_pages' );
 
 // Add image size
-add_image_size( 'square', 256, 256, false);
+add_image_size( 'square_menu', 256, 256, false);
 
 // Disable Gutenberg editor
 add_filter("use_block_editor_for_post_type", "disable_gutenberg_editor");
@@ -121,6 +128,18 @@ function disable_gutenberg_editor()
 return false;
 }
 
+// Disable content editor from frontpage
+add_action('admin_head', 'remove_content_editor');
+
+function remove_content_editor()
+{
+    if((int) get_option('page_on_front')==get_the_ID(2))
+    {
+        remove_post_type_support('page', 'editor');
+    }
+}
+
+// What is that line? 
 if( function_exists('acf_add_options_page') ) {
 	
 	acf_add_options_page(array(
