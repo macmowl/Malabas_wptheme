@@ -1,21 +1,8 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
-//_____________________________________________variables________________________________
-$white :#FFF;
-$black : #292929;
-$grey : #F5F5F5;
-//_____________________________________________extends___________________________________
-
-//_____________________________________________menu______________________________________
+@import 'reset';
 
 body
 {
     font-family:"Poppins";
-    max-width: 120rem;
 }
 
 .admin-bar .menu {

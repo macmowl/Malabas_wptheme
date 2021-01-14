@@ -7,9 +7,9 @@
     ?>
     <section class="hero" style="background-image: url('<?= $image_id['url']?>');">
         
-        <H2><?php the_field( 'hero-subtitle' ); ?></h2>    
-        <h1><?php the_field( 'hero-title' ); ?></h1>
-        <p><a href="<?php the_field( 'hero-link' ); ?>"><?php the_field( 'hero-label_link' ); ?></a></p>
+        <H2 class="hero__subtitle"><?php the_field( 'hero-subtitle' ); ?></h2>    
+        <h1 class="hero__title"><?php the_field( 'hero-title' ); ?></h1>
+        <p class="hero__link"><a href="<?php the_field( 'hero-link' ); ?>"><?php the_field( 'hero-label_link' ); ?></a></p>
         
     </section>
     <?php
@@ -59,11 +59,11 @@
             ?>
         </div> 
         <div class="intro__info">
-            <h2 class="firstWord"><?php the_field( 'intro_title' ); ?></h>
-            <H3><?php the_field( 'intro_subtitle' ); ?></h3> 
-            <p><?php the_field( 'intro_content' ); ?></p>
-            <h4><?php the_field( 'intro_signature' ); ?></h4>
-            <p><?php the_field( 'intro_signature-caption' ); ?></p>
+            <h2 class="firstWord intro__info__title"><?php the_field( 'intro_title' ); ?></h>
+            <H3 class="intro__info__subtitle"><?php the_field( 'intro_subtitle' ); ?></h3> 
+            <p class="intro__info__content"><?php the_field( 'intro_content' ); ?></p>
+            <h4 class="intro__info__signature"><?php the_field( 'intro_signature' ); ?></h4>
+            <p class="intro__info__signature-caption"><?php the_field( 'intro_signature-caption' ); ?></p>
         </div>
     </section>
 
