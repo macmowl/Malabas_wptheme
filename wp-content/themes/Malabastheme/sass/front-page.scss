@@ -10,14 +10,29 @@
     background-size: cover;
     background-position: bottom center;
     padding: 7rem 3.2rem 0 3.2rem;
-
-    &__title {
-        color: $white;
-        font-size: 4rem;
+    
+    @include extralarge {
+        grid-template-columns: 1fr map-get($breakpoints, extralarge) 1fr;
+        grid-template-areas: ". main .";
+        justify-content: center;
+        padding: 7rem 0 0 0;
     }
 
-    &__subtitle {
-        color: $white;
+    &__wrapper {
+        
+        @include extralarge {
+            grid-area: main;
+        }
+
+        &__title {
+            color: $white;
+            font-size: 4rem;
+        }
+    
+        &__subtitle {
+            color: $white;
+        }
+
     }
 }
 
