@@ -1,8 +1,29 @@
+<<<<<<< HEAD
 @import 'reset';
+=======
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
+//_____________________________________________variables________________________________
+$white :#FFF;
+$black : #1a1a1a;
+$grey : #F5F5F5;
+//_____________________________________________extends___________________________________
+
+//_____________________________________________menu______________________________________
+>>>>>>> header
 
 body
 {
     font-family:"Poppins";
+<<<<<<< HEAD
+=======
+    max-width: 125rem;
+>>>>>>> header
 }
 
 .admin-bar .menu {
@@ -55,14 +76,81 @@ body
     }
     
 }  
+//________________________________________newsletter________________________
+.newsletter
+{
+    width: 100%;
+    text-align:center;
+    position: relative;
+    font-family: "Poppins";
+    
+    &__center
+    {
+        position: relative;
+        top: 2rem;
+        display:  block;
+        z-index: 2;
+        margin: auto;
+        width: 70%;
+        height: 15rem;
+        background-color: $black;
+        box-shadow: 0px 5px 5px black;
+        
+        &__img
+        {
+            position: relative; 
+            
+        }
+    }
+    &__form
+    {   display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin-left: 2rem;
+        margin-right: 2rem;
+        
+        p{
+            font-size: 2rem;
+            color: #efefef;
+            width: 10rem;
+            font-family: "Poppins:wght@700";
+            font-weight: bold;
+        }
+        &__mail , &__submit
+        {
+            margin-top: 2rem;
+            height: 2rem;
+            border: 1px solid $black;
+            text-align: center;
+            border-radius: 0.5rem;
+        }
+        &__submit
+        {
+            width: 8rem;
+            p{
+                font-weight: bold;
+            }
+        }
+    }
+}
 //_________________________________________footer____________________________
-
+.footer__img
+{
+    z-index: -2;
+    position: relative;
+    margin-top: -6rem;
+    width: 125rem;
+    display: block; 
+    
+}
 .site__footer
 {
-    padding-top: 2rem;
+    width: 100%;
+    position: relative;
+    padding-top: 5rem;
     padding-left: 2rem;
     padding-right: 2rem;
-    background-color: black;
+    background-color:$black;
     color: white;
     display: flex;
     flex-wrap:wrap;
@@ -134,6 +222,23 @@ body
     {
         margin-top: 1rem;
     }
-}  
+} 
+.site__footer__part__two 
+{
+    background-color: $black;
+    
+    p{
+        color: white;
+        text-align: center;
+        padding-top: 2rem;
+    }
+    &__line
+    {
+        border-top: 1px solid $white;
+        width: 70%;
+        display: block;
+        margin: auto; 
+    }
+}
 
       

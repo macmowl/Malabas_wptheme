@@ -1,4 +1,15 @@
 <?php
+// Clé d'API (au début du fichier, important)
+define( 'MALABAS_GMAP_API_KEY', 'AIzaSyBl3tWC4VfHySJ_7jciE3aQKQjSf5XQrxU' );
+
+
+// Clé Google Maps pour le champ ACF (à la suite de votre code existant)
+function malabas_acf_google_map_api( $api ){
+	$api['key'] = MALABAS_GMAP_API_KEY;
+	return $api;
+}
+
+add_filter( 'acf/fields/google_map/api', 'malabas_acf_google_map_api' );
 // Ajouter la prise en charge des images mises en avant
 add_theme_support( 'post-thumbnails' );
 
@@ -106,7 +117,7 @@ register_nav_menus( array(
 
 // Change dashboard Articles to Recipes
 function malabas_change_post_object() {
-    $get_post_type = get_post_type_object('post');
+    $get_post_type = get_post_type_object('post'); //NB changer le nom .... donc changer la fonction, p ê transformer comme lg 71
     $labels = $get_post_type->labels;
         $labels->name = 'Recipes';
         $labels->singular_name = 'Recipe';
@@ -146,9 +157,15 @@ add_action('admin_head', 'remove_content_editor');
 
 function remove_content_editor()
 {
+    
     if((int) get_option('page_on_front')==get_the_ID(2))
     {
         remove_post_type_support('page', 'editor');
+    }
+    
+    if ((int) get_the_ID(21))
+    {
+        remove_post_type_support('restaurants', 'editor');
     }
 }
 
@@ -174,5 +191,31 @@ if( function_exists('acf_add_options_page') ) {
 		'menu_title'	=> 'Footer',
 		'parent_slug'	=> 'theme-general-settings',
 	));
-	
+	//Ajouter dans l'admin les widgets et la possibilité de sidebar 
+
+
+register_sidebar( array(
+    'id' => 'single-sidebar',
+    'name' => 'Restaurant Single',
+    'before_widget'  => '<div class="site__sidebar__widget %2$s">',
+    'after_widget'  => '</div>',
+    'before_title' => '<p class="site__sidebar__widget__title">',
+    'after_title' => '</p>',
+));
+  add_action( 'widgets_init', 'register_sidebar' );
+
+  register_sidebar(
+     array(
+        'id' => 'social-sidebar',
+        'name' => 'social_sidebar',
+        'before_widget'  => '<div class="site__social__sidebar %2$s">',
+        'after_widget'  => '</div>',
+        'before_title' => '<p class="site__social__sidebar__title">',
+        'after_title' => '</p>',
+     ));
 }
+<<<<<<< HEAD
+=======
+
+	
+>>>>>>> header

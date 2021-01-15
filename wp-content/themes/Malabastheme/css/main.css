@@ -1,8 +1,21 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+<<<<<<< HEAD
 
 body {
   font-family: "Poppins";
+=======
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins";
+  max-width: 125rem;
+>>>>>>> header
 }
 
 .admin-bar .menu {
@@ -27,7 +40,7 @@ body {
   flex-direction: row;
 }
 .site__header__menu li {
-  border: 1px solid #292929;
+  border: 1px solid #1a1a1a;
   transition: all 400ms;
   display: inline;
   margin-left: 1rem;
@@ -42,18 +55,76 @@ body {
   transform: scale(1.15);
 }
 .site__header__menu li:hover a {
-  color: #292929;
+  color: #1a1a1a;
 }
 .site__header__menu li a {
   color: #FFF;
   text-decoration: none;
 }
 
+.newsletter {
+  width: 100%;
+  text-align: center;
+  position: relative;
+  font-family: "Poppins";
+}
+.newsletter__center {
+  position: relative;
+  top: 2rem;
+  display: block;
+  z-index: 2;
+  margin: auto;
+  width: 70%;
+  height: 15rem;
+  background-color: #1a1a1a;
+  box-shadow: 0px 5px 5px black;
+}
+.newsletter__center__img {
+  position: relative;
+}
+.newsletter__form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+.newsletter__form p {
+  font-size: 2rem;
+  color: #efefef;
+  width: 10rem;
+  font-family: "Poppins:wght@700";
+  font-weight: bold;
+}
+.newsletter__form__mail, .newsletter__form__submit {
+  margin-top: 2rem;
+  height: 2rem;
+  border: 1px solid #1a1a1a;
+  text-align: center;
+  border-radius: 0.5rem;
+}
+.newsletter__form__submit {
+  width: 8rem;
+}
+.newsletter__form__submit p {
+  font-weight: bold;
+}
+
+.footer__img {
+  z-index: -2;
+  position: relative;
+  margin-top: -6rem;
+  width: 125rem;
+  display: block;
+}
+
 .site__footer {
-  padding-top: 2rem;
+  width: 100%;
+  position: relative;
+  padding-top: 5rem;
   padding-left: 2rem;
   padding-right: 2rem;
-  background-color: black;
+  background-color: #1a1a1a;
   color: white;
   display: flex;
   flex-wrap: wrap;
@@ -109,4 +180,19 @@ body {
 }
 .site__footer .footer__contact__adress__restaurant {
   margin-top: 1rem;
+}
+
+.site__footer__part__two {
+  background-color: #1a1a1a;
+}
+.site__footer__part__two p {
+  color: white;
+  text-align: center;
+  padding-top: 2rem;
+}
+.site__footer__part__two__line {
+  border-top: 1px solid #FFF;
+  width: 70%;
+  display: block;
+  margin: auto;
 }
