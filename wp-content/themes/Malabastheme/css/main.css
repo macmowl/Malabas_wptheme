@@ -1,5 +1,54 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 62.5%;
+  color: #292929;
+}
+
+p, a {
+  font-size: 1.6rem;
+  line-height: 2.8rem;
+}
+
+a {
+  color: #FFF;
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 3.2rem;
+  line-height: 4.6rem;
+}
+
+h2 {
+  font-size: 2.8rem;
+  line-height: 4rem;
+}
+
+h3 {
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+}
+
+h4 {
+  font-size: 2rem;
+  line-height: 2.8rem;
+}
+
+body {
+  line-height: 1;
+}
+
+.btn {
+  border: 0;
+  background-color: #292929;
+  color: #FFF;
+  padding: 15px 20px;
+  font-size: 1.6rem;
+}
 
 body {
   font-family: "Poppins";
@@ -109,4 +158,94 @@ body {
 }
 .site__footer .footer__contact__adress__restaurant {
   margin-top: 1rem;
+}
+
+.menufront {
+  text-align: center;
+  width: 100%;
+  padding: 6rem 3.2rem 6rem 3.2rem;
+}
+@media screen and (min-width: 1200px) {
+  .menufront {
+    display: grid;
+    grid-template-columns: 1fr 600px 600px 1fr;
+    grid-template-areas: ". images infos .";
+    justify-content: center;
+  }
+}
+.menufront__mobile {
+  text-transform: uppercase;
+}
+@media screen and (min-width: 1200px) {
+  .menufront__mobile {
+    display: none;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .menufront__images {
+    grid-area: images;
+  }
+}
+.menufront__images img {
+  margin: 1rem;
+}
+.menufront__infos {
+  margin-top: 30px;
+}
+@media screen and (min-width: 1200px) {
+  .menufront__infos {
+    grid-area: infos;
+    padding: 0 2rem;
+  }
+}
+.menufront__infos__desktop {
+  display: none;
+  text-transform: uppercase;
+}
+@media screen and (min-width: 1200px) {
+  .menufront__infos__desktop {
+    display: block;
+  }
+}
+.menufront__infos__desktop-subtitle {
+  font-weight: 200;
+  margin-bottom: 2rem;
+}
+.menufront__infos__desktop-title {
+  margin-bottom: 4rem;
+}
+.menufront__infos-description {
+  margin-bottom: 4rem;
+}
+@media screen and (min-width: 1200px) {
+  .menufront__infos-description {
+    margin-bottom: 8rem;
+  }
+}
+
+.latestrecipes {
+  width: 100%;
+  padding-top: 6rem;
+}
+.latestrecipes__subtitle {
+  font-weight: 300;
+  text-align: center;
+}
+.latestrecipes__title {
+  text-transform: uppercase;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+.latestrecipes__img-wrapper {
+  width: 100%;
+  height: 150px;
+}
+.latestrecipes__img-wrapper img {
+  object-fit: cover;
+}
+.latestrecipes__infos {
+  padding: 3.2rem;
+}
+.latestrecipes__infos-date {
+  color: #7b7b7b;
 }

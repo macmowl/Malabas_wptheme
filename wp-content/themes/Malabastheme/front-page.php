@@ -54,64 +54,31 @@
     </section>
     
     <section class="intro">  
-        <div class="intro__img-wrapper">
-            <?php
-                $image_id = get_field( 'intro_image' );
-                if( $image_id ) {
-                    echo wp_get_attachment_image( $image_id['ID'], 'medium' );
-                }
-            ?>
-        </div> 
-        <div class="intro__info">
-            <h2 class="firstWord intro__info__title"><?php the_field( 'intro_title' ); ?></h>
-            <H3 class="intro__info__subtitle"><?php the_field( 'intro_subtitle' ); ?></h3> 
-            <?php the_field( 'intro_content' ); ?>
-            <p class="intro__info__signature-caption"><?php the_field( 'intro_signature-caption' ); ?></p>
-            <h4 class="intro__info__signature"><?php the_field( 'intro_signature' ); ?></h4>
-            
+        <div class="intro-wrapper">
+            <div class="intro-wrapper__img-wrapper">
+                <?php
+                    $image_id = get_field( 'intro_image' );
+                    if( $image_id ) {
+                        echo wp_get_attachment_image( $image_id['ID'], 'medium' );
+                    }
+                ?>
+            </div> 
+            <div class="intro-wrapper__info">
+                <h2 class="firstWord intro-wrapper__info__title"><?php the_field( 'intro_title' ); ?></h>
+                <H3 class="intro-wrapper__info__subtitle"><?php the_field( 'intro_subtitle' ); ?></h3> 
+                <?php the_field( 'intro_content' ); ?>
+                <p class="intro-wrapper__info__signature-caption"><?php the_field( 'intro_signature-caption' ); ?></p>
+                <h4 class="intro-wrapper__info__signature"><?php the_field( 'intro_signature' ); ?></h4>
+                
+            </div>
         </div>
+        
     </section>
 
     <section class="restaurants">
-
     </section>
 
-    <section class="menufront">
-        <div class="menufront__mobile">
-            <p class="menufront__mobile__infos-subtitle">
-                <?php the_field( 'menu_subtitle' ); ?>
-            </p>
-            <h2><?php the_field( 'menu_title' ); ?></h2>
-        </div>
-        <div class="menufront__images">
-            
-            <?php
-                $image_id = get_field( 'menu_image1' );
-                if( $image_id ) {
-                    echo wp_get_attachment_image( $image_id['ID'], 'square_menu' );
-                }
-
-                $image_id = get_field( 'menu_image2' );
-                if( $image_id ) {
-                    echo wp_get_attachment_image( $image_id['ID'], 'square_menu' );
-                }
-
-                $image_id = get_field( 'menu_image3' );
-                if( $image_id ) {
-                    echo wp_get_attachment_image( $image_id['ID'], 'square_menu' );
-                }
-
-                $image_id = get_field( 'menu_image4' );
-                if( $image_id ) {
-                    echo wp_get_attachment_image( $image_id['ID'], 'square_menu' );
-                }
-            ?>
-        </div>
-        <div class="menufront__infos">
-            <p class="menufront__infos-description"><?php the_field( 'menu_description' ); ?></p>
-            <button class="btn"><?php the_field( 'menu_link-label' ); ?></button>
-        </div>
-    </section>
+    <?php get_template_part( 'parts/discover-menu' ); ?>
 
     <section class="testimonials">
         <div class="testimonials__wrapper">            
@@ -138,9 +105,8 @@
         ?>
     </section>
 
-    <section class="latest-recipes">
-                WIP
-    </section>
+    
+    <?php get_template_part( 'parts/latest-recipes' ); ?>
     
     <?php endwhile; endif; ?>
 <?php get_footer(); ?>
