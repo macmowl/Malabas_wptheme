@@ -28,6 +28,14 @@ function malabas_register_assets() {
         '1.0', 
         true
     );
+
+    wp_enqueue_script( 
+        'javascript', 
+        'http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js', 
+        array(), 
+        '1.0', 
+        true
+    );
     
     // Déclarer style.css à la racine du thème
     wp_enqueue_style( 

@@ -6,31 +6,60 @@
     text-align: left;
     color: $white;
     overflow: hidden;
-    display: inline-block;
     background-size: cover;
     background-position: bottom center;
     padding: 7rem 3.2rem 0 3.2rem;
+
+    @include medium {
+        padding: 7rem 5rem 0 5rem;
+    }
     
     @include extralarge {
-        grid-template-columns: 1fr map-get($breakpoints, extralarge) 1fr;
+        display: grid;
+        grid-template-columns: 1fr 1200px 1fr;
         grid-template-areas: ". main .";
         justify-content: center;
-        padding: 7rem 0 0 0;
     }
 
     &__wrapper {
-        
+
         @include extralarge {
             grid-area: main;
+            justify-content: center;
+        }
+
+        &__subtitle {
+            color: $white;
+            font-weight: 200;
+            margin-bottom: 1.3rem;
+
+            @include extralarge {
+                font-size: 5rem;
+            }
         }
 
         &__title {
             color: $white;
             font-size: 4rem;
+            font-weight: 600;;
+            margin-bottom: 2rem;
+
+            @include extralarge {
+                font-size: 8rem;
+            }
         }
     
-        &__subtitle {
-            color: $white;
+        &__separator {
+            width: 40px;
+            height: 1px;
+            border-bottom: 1px solid $white;
+            float: left;
+            margin-right: 10px;
+            margin-top: 12px;
+        }
+
+        &__link {
+            font-size: 1.3rem;
         }
 
     }
@@ -51,6 +80,10 @@
         width: 75%;
         margin: 0 auto;
         margin-top: 60px;
+
+        &__title {
+            margin-top: 15px;
+        }
 
         p {
             display: none;
@@ -76,14 +109,139 @@
 
         &__title {
             text-transform: uppercase;
+            margin-bottom: 0;
         }
 
         &__subtitle {
             font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+
+        &__signature-caption {
+            margin-top: 20px;
+            font-weight: 600;
+
         }
 
         &__signature {
-            font-size: 2rem;
+            font-weight: 200;
+            font-size: 3rem;
         }
     }
+}
+
+.menufront {
+    text-align: center;
+    width: 100%;
+    padding: 6rem 3.2rem 6rem 3.2rem;
+
+    &__mobile {
+        text-transform: uppercase;
+    }
+
+    &__images {
+
+        img {
+            margin: 1rem;
+        }
+    }
+
+    &__infos {
+        margin-top: 30px;
+
+        &-description {
+            margin-bottom: 40px;
+        }
+    }
+}
+
+.testimonials {
+    background-color: $black;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+
+    &__wrapper {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+
+        &-slides {
+            display: flex;
+            flex-direction: row;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch;
+
+            &::-webkit-scrollbar {
+                width: 0;
+                height: 0;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background: none;
+                border-radius: 0;
+            }
+            
+            &::-webkit-scrollbar-track {
+                background: transparent;
+            }
+        }
+    }
+
+    &__infos {
+        padding: 8rem 3.2rem 3rem 3.2rem;
+
+        &-quote {
+            color: $white;
+            margin-bottom: 20px;
+        }
+
+        &-signature {
+            color: $white;
+            font-weight: 200;
+        }
+
+        &-separator {
+            width: 20px;
+            height: 1px;
+            border-bottom: 1px solid $white;
+            display: inline;
+            float: left;
+            margin-right: 10px;
+            margin-top: 12px;
+        }
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    &__slide {
+        scroll-snap-align: start;
+        flex-shrink: 0;
+        width: 100%;
+        transform-origin: center center;
+        position: relative;
+        text-align: center;
+
+        &:after {
+            content: '"';
+            font-size: 4rem;
+            color: $white;
+            transform: scale(1.5, 1.5);
+            position: absolute;
+            top: 5rem;
+            left: 20rem;
+        }
+    }
+}
+
+.slick-prev:before,
+.slick-next:before {
+color: $white;
 }

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -9,7 +9,7 @@
 
 p, a {
   font-size: 1.6rem;
-  margin-bottom: 1.6rem;
+  line-height: 2.8rem;
 }
 
 a {
@@ -19,26 +19,34 @@ a {
 
 h1 {
   font-size: 3.2rem;
-  margin-bottom: 3.2rem;
+  line-height: 4.6rem;
 }
 
 h2 {
   font-size: 2.8rem;
-  margin-bottom: 2.8rem;
+  line-height: 4rem;
 }
 
 h3 {
   font-size: 2.4rem;
-  margin-bottom: 2.4rem;
+  line-height: 3.2rem;
 }
 
 h4 {
   font-size: 2rem;
-  margin-bottom: 2rem;
+  line-height: 2.8rem;
 }
 
 body {
   line-height: 1;
+}
+
+.btn {
+  border: 0;
+  background-color: #292929;
+  color: #FFF;
+  padding: 15px 20px;
+  font-size: 1.6rem;
 }
 
 .hero {
@@ -47,30 +55,60 @@ body {
   text-align: left;
   color: #FFF;
   overflow: hidden;
-  display: inline-block;
   background-size: cover;
   background-position: bottom center;
   padding: 7rem 3.2rem 0 3.2rem;
 }
+@media screen and (min-width: 768px) {
+  .hero {
+    padding: 7rem 5rem 0 5rem;
+  }
+}
 @media screen and (min-width: 1200px) {
   .hero {
+    display: grid;
     grid-template-columns: 1fr 1200px 1fr;
     grid-template-areas: ". main .";
     justify-content: center;
-    padding: 7rem 0 0 0;
   }
 }
 @media screen and (min-width: 1200px) {
   .hero__wrapper {
     grid-area: main;
+    justify-content: center;
+  }
+}
+.hero__wrapper__subtitle {
+  color: #FFF;
+  font-weight: 200;
+  margin-bottom: 1.3rem;
+}
+@media screen and (min-width: 1200px) {
+  .hero__wrapper__subtitle {
+    font-size: 5rem;
   }
 }
 .hero__wrapper__title {
   color: #FFF;
   font-size: 4rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
 }
-.hero__wrapper__subtitle {
-  color: #FFF;
+@media screen and (min-width: 1200px) {
+  .hero__wrapper__title {
+    font-size: 8rem;
+  }
+}
+.hero__wrapper__separator {
+  width: 40px;
+  height: 1px;
+  border-bottom: 1px solid #FFF;
+  float: left;
+  margin-right: 10px;
+  margin-top: 12px;
+}
+.hero__wrapper__link {
+  font-size: 1.3rem;
 }
 
 .usps {
@@ -90,6 +128,9 @@ body {
   margin: 0 auto;
   margin-top: 60px;
 }
+.usps .usp__title {
+  margin-top: 15px;
+}
 .usps .usp p {
   display: none;
 }
@@ -108,10 +149,114 @@ body {
 }
 .intro__info__title {
   text-transform: uppercase;
+  margin-bottom: 0;
 }
 .intro__info__subtitle {
   font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+.intro__info__signature-caption {
+  margin-top: 20px;
+  font-weight: 600;
 }
 .intro__info__signature {
-  font-size: 2rem;
+  font-weight: 200;
+  font-size: 3rem;
+}
+
+.menufront {
+  text-align: center;
+  width: 100%;
+  padding: 6rem 3.2rem 6rem 3.2rem;
+}
+.menufront__mobile {
+  text-transform: uppercase;
+}
+.menufront__images img {
+  margin: 1rem;
+}
+.menufront__infos {
+  margin-top: 30px;
+}
+.menufront__infos-description {
+  margin-bottom: 40px;
+}
+
+.testimonials {
+  background-color: #292929;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+.testimonials__wrapper {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+.testimonials__wrapper-slides {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+.testimonials__wrapper-slides::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+.testimonials__wrapper-slides::-webkit-scrollbar-thumb {
+  background: none;
+  border-radius: 0;
+}
+.testimonials__wrapper-slides::-webkit-scrollbar-track {
+  background: transparent;
+}
+.testimonials__infos {
+  padding: 8rem 3.2rem 3rem 3.2rem;
+}
+.testimonials__infos-quote {
+  color: #FFF;
+  margin-bottom: 20px;
+}
+.testimonials__infos-signature {
+  color: #FFF;
+  font-weight: 200;
+}
+.testimonials__infos-separator {
+  width: 20px;
+  height: 1px;
+  border-bottom: 1px solid #FFF;
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  margin-top: 12px;
+}
+.testimonials img {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+.testimonials__slide {
+  scroll-snap-align: start;
+  flex-shrink: 0;
+  width: 100%;
+  transform-origin: center center;
+  position: relative;
+  text-align: center;
+}
+.testimonials__slide:after {
+  content: '"';
+  font-size: 4rem;
+  color: #FFF;
+  transform: scale(1.5, 1.5);
+  position: absolute;
+  top: 5rem;
+  left: 20rem;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: #FFF;
 }
