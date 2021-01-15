@@ -1,27 +1,148 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 62.5%;
+  color: #292929;
+}
+
+p, a {
+  font-size: 1.6rem;
+  margin-bottom: 1.6rem;
+}
+
+a {
+  color: #FFF;
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 3.2rem;
+  margin-bottom: 3.2rem;
+}
+
+h2 {
+  font-size: 2.8rem;
+  margin-bottom: 2.8rem;
+}
+
+h3 {
+  font-size: 2.4rem;
+  margin-bottom: 2.4rem;
+}
+
+h4 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+body {
+  line-height: 1;
+}
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
-.section_gray {
-  background-color: #292929;
-  height: 20rem;
+.recipe_Principal {
   width: 100vw;
 }
 
+.recipe__SectionGray {
+  background-color: #292929;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.boxGrayMiddle {
+  width: 60%;
+  align-self: center;
+  position: relative;
+  top: 10rem;
+}
+
 .single__Title {
-  color: white;
-  margin-left: 15rem;
+  color: #FFF;
+}
+
+.single__Title--paragraphe {
+  color: #FFF;
+  margin-bottom: 5rem;
+}
+
+.single__Title--image {
+  width: 100%;
+}
+
+.menu__recipe {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: top;
+  margin-bottom: 2rem;
+}
+
+.menu__recipe--left-btn {
+  width: 10rem;
+  border-right: 1px solid white;
+  margin-right: 3rem;
+  font-size: 1.6rem;
+  color: #FFF;
+}
+
+.menu__recipe--left {
+  display: flex;
+  align-items: top;
+}
+
+.menu__recipe--left-text {
+  padding: 0;
+  color: #FFF;
+}
+
+.recipe__SectionIngredient {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 13rem;
+}
+
+.box__IngredientEtInstructions {
+  width: 50%;
+  align-self: center;
+}
+
+.ingredient__Text {
+  font-size: 4rem;
+  margin-left: 2rem;
+}
+
+.box__Ingredient {
   margin-bottom: 3rem;
 }
-.single__Title--paragraphe {
-  margin-left: 15rem;
-  color: white;
+
+.instructionEtImg {
+  display: flex;
 }
-.single__Title--Boximage {
-  margin-left: 15rem;
-  background-color: greenyellow;
-  height: 15rem;
+
+.instructionNumber {
+  color: #FFF;
+  background-color: black;
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 3rem;
+}
+
+.instructionNumberP {
+  color: #FFF;
+  margin: 0;
 }
