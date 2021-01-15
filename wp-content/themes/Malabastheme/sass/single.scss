@@ -16,20 +16,30 @@
 
 }
 .boxGrayMiddle {
-  width: 60%;
+  width: 100vw;
   align-self: center;
   position: relative;
   top: 10rem;
+  @include medium {
+    width:60%;
+  }
 }
 .single__Title {
   color: $white;
+  padding: 0 2rem;
 }
 .single__Title--paragraphe {
   color: $white;
   margin-bottom: 5rem;
+  padding: 0 2rem;
 }
 .single__Title--image {
   width: 100%;
+  -webkit-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
+
+
 }
 .menu__recipe {
   width: 100%;
@@ -37,6 +47,7 @@
   justify-content: space-between;
   align-items: top;
   margin-bottom: 2rem;
+  padding: 0 2rem;
 }
 .menu__recipe--left-btn {
   width: 10rem;
@@ -62,24 +73,34 @@
   margin-top: 13rem;
 }
 .box__IngredientEtInstructions {
-  width: 50%;
+  width: 90%;
   align-self: center;
+  @include medium {
+    width:50%;
+  }
 }
 .ingredient__Text {
   font-size: 4rem;
   margin-left: 2rem;
+}
+.ingredient__Text li {
+  padding-bottom: 1rem;
+  padding-left: 5rem;
 }
 .box__Ingredient {
   margin-bottom: 3rem;
 }
 .instructionEtImg {
   display: flex;
+  margin-bottom: 3rem;
+  width: 100%;
 }
 .instructionNumber {
   color: $white;
   background-color: black;
   border-radius: 50%;
   width: 2rem;
+  min-width: 2rem;
   height: 2rem;
   display: flex;
   justify-content: center;
@@ -89,6 +110,22 @@
 .instructionNumberP {
   color: $white;
   margin: 0;
-  
-  
+}
+.instru {
+  font-size: 1.6rem;
+}
+.instru * {
+  font-size: 1.6rem;
+}
+.box__Instructions {
+  margin-top: 10rem;
+  width: 100%;
+}
+.imgInstruction {
+  width: 100%;
+  margin-top: 1rem;
+  -webkit-box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.75);
+
 }
