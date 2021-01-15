@@ -5,7 +5,7 @@
         $image_id = get_field( 'hero-image' );
         if( $image_id ) {
     ?>
-    <section class="hero" style="background-image: url('<?= $image_id['url']?>');">
+    <section class="hero" style="background-image: url('<?= $image_id['url']?>'); z-index: 0;">
         <div class="hero__wrapper">
             <H2 class="hero__wrapper__subtitle"><?php the_field( 'hero-subtitle' ); ?></h2>    
             <h1 class="hero__wrapper__title firstWordTitle"><?php the_field( 'hero-title' ); ?></h1>
@@ -18,36 +18,39 @@
     ?>
 
     <section class="usps">
-        <div class="usp" id="usp1">
-            <?php
-                $image_id = get_field( 'hero_icon' );
-                if( $image_id ) {
-                    echo wp_get_attachment_image( $image_id['ID'], 'medium' );
-                }
-            ?>
-            <h3 class="usp__title"><?php the_field( 'hero_title' ); ?></h3>
-            <p class="usp__desc"><?php the_field( 'hero_description' ); ?></p>
+        <div class="usps-wrapper">
+            <div class="usps-wrapper__usp" id="usp1">
+                <?php
+                    $image_id = get_field( 'hero_icon' );
+                    if( $image_id ) {
+                        echo wp_get_attachment_image( $image_id['ID'], 'medium' );
+                    }
+                ?>
+                <h3 class="usps-wrapper__usp-title"><?php the_field( 'hero_title' ); ?></h3>
+                <p class="usps-wrapper__usp-desc"><?php the_field( 'hero_description' ); ?></p>
+            </div>
+            <div class="usps-wrapper__usp" id="usp2">
+                <?php
+                    $image_id = get_field( 'hero_icon2' );
+                    if( $image_id ) {
+                        echo wp_get_attachment_image( $image_id['ID'], 'medium' );
+                    }
+                ?>
+                <h3 class="usps-wrapper__usp-title"><?php the_field( 'hero_title2' ); ?></h3>
+                <p class="usps-wrapper__usp-desc"><?php the_field( 'hero_description2' ); ?></p>
+            </div>
+            <div class="usps-wrapper__usp" id="usp3">
+                <?php
+                    $image_id = get_field( 'hero_icon3' );
+                    if( $image_id ) {
+                        echo wp_get_attachment_image( $image_id['ID'], 'medium' );
+                    }
+                ?>
+                <h3 class="usps-wrapper__usp-title"><?php the_field( 'hero_title3' ); ?></h3>
+                <p class="usps-wrapper__usp-desc"><?php the_field( 'hero_description3' ); ?></p>
+            </div>
         </div>
-        <div class="usp" id="usp2">
-            <?php
-                $image_id = get_field( 'hero_icon2' );
-                if( $image_id ) {
-                    echo wp_get_attachment_image( $image_id['ID'], 'medium' );
-                }
-            ?>
-            <h3 class="usp__title"><?php the_field( 'hero_title2' ); ?></h3>
-            <p class="usp__desc"><?php the_field( 'hero_description2' ); ?></p>
-        </div>
-        <div class="usp" id="usp3">
-            <?php
-                $image_id = get_field( 'hero_icon3' );
-                if( $image_id ) {
-                    echo wp_get_attachment_image( $image_id['ID'], 'medium' );
-                }
-            ?>
-            <h3 class="usp__title"><?php the_field( 'hero_title3' ); ?></h3>
-            <p class="usp__desc"><?php the_field( 'hero_description3' ); ?></p>
-        </div>
+        
     </section>
     
     <section class="intro">  
