@@ -62,6 +62,12 @@ function malabas_register_assets() {
         array(), 
         '1.0'
     );
+    wp_enqueue_style( 
+        'malabas single-restaurant', 
+        get_template_directory_uri() . '/css/single-restaurant.css',
+        array(), 
+        '1.0'
+    );
     //Déclarer dashicon du menu 
     wp_enqueue_style( 'dashicons' );
 

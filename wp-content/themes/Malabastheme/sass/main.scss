@@ -6,7 +6,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
 //_____________________________________________variables________________________________
-$white :#FFF;
+$white :#eae5e5;
 $black : #1a1a1a;
 $grey : #F5F5F5;
 //_____________________________________________extends___________________________________
@@ -16,7 +16,7 @@ $grey : #F5F5F5;
 body
 {
     font-family:"Poppins";
-    max-width: 125rem;
+
 }
 
 .admin-bar .menu {
@@ -27,7 +27,7 @@ body
 .site__header {
     display: flex;
     justify-content: space-between; 
-    
+    background-color: $black;
     
    
     
@@ -111,15 +111,16 @@ body
         }
         &__mail , &__submit
         {
-            margin-top: 2rem;
-            height: 2rem;
+            margin-top: 1rem;
+            height: 4rem;
             border: 1px solid $black;
             text-align: center;
             border-radius: 0.5rem;
+            font-size: 1.8rem;
         }
         &__submit
         {
-            width: 8rem;
+            width: 12rem;
             p{
                 font-weight: bold;
             }
@@ -148,8 +149,13 @@ body
     display: flex;
     flex-wrap:wrap;
     flex: 25%;
+    p, b{
+        color: white;
+        font-size: 1.6rem;
+    }
     .footer__intro
     {
+        
         margin-right: 5rem;
         &__logo
         {
@@ -170,13 +176,13 @@ body
                 margin-right: 2rem;
             }
         }
-      
-      
+     
     }
     .footer__open__hours__repeater
     {
         margin-bottom: 1rem;
         font-weight: bold;
+
     }
     .footer__open__hours__repeater__line
     {
@@ -194,7 +200,7 @@ body
     }
     .footer__contact
     {
-        margin-left: 2rem;
+        margin-left: 4rem;
         
     }
     .footer__contact__phone
