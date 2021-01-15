@@ -43,13 +43,16 @@
             </div>
             
             <div class="footer__instagram">
-                [instagram-feed num=6 cols=3]
+                    <?php dynamic_sidebar( 'single-sidebar' ); ?>
             </div>
        </div>
        
 </footer>
 <div class="site__footer__part__two">
-           <p>Tous droits réservés à la Malabas Team <p>
+    <div class="site__footer__part__two__line">
+        <p>Tous droits réservés à la Malabas Team <p>
+    </div>
+           
 </div>
 	<?php wp_footer(); ?>
 </body>

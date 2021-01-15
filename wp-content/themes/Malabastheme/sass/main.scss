@@ -7,7 +7,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
 //_____________________________________________variables________________________________
 $white :#FFF;
-$black : #292929;
+$black : #1a1a1a;
 $grey : #F5F5F5;
 //_____________________________________________extends___________________________________
 
@@ -80,15 +80,15 @@ body
     &__center
     {
         position: relative;
-        top: 3rem;
+        top: 2rem;
         display:  block;
         z-index: 2;
         margin: auto;
         width: 70%;
-        height: 10rem;
-        background-color: black;
-        border: 1px solid #404040;
-        //box-shadow: 10px 5px 5px #404040;
+        height: 15rem;
+        background-color: $black;
+        box-shadow: 0px 5px 5px black;
+        
         &__img
         {
             position: relative; 
@@ -106,7 +106,6 @@ body
             font-size: 2rem;
             color: #efefef;
             width: 10rem;
-            
             font-family: "Poppins:wght@700";
             font-weight: bold;
         }
@@ -116,6 +115,7 @@ body
             height: 2rem;
             border: 1px solid $black;
             text-align: center;
+            border-radius: 0.5rem;
         }
         &__submit
         {
@@ -131,7 +131,7 @@ body
 {
     z-index: -2;
     position: relative;
-    margin-top: -5rem;
+    margin-top: -6rem;
     width: 125rem;
     display: block; 
     
@@ -139,12 +139,11 @@ body
 .site__footer
 {
     width: 100%;
-
     position: relative;
     padding-top: 5rem;
     padding-left: 2rem;
     padding-right: 2rem;
-    background-color: black;
+    background-color:$black;
     color: white;
     display: flex;
     flex-wrap:wrap;
@@ -219,12 +218,19 @@ body
 } 
 .site__footer__part__two 
 {
-    background-color: black;
-    border-top: 1px solid $white;
+    background-color: $black;
+    
     p{
         color: white;
         text-align: center;
         padding-top: 2rem;
+    }
+    &__line
+    {
+        border-top: 1px solid $white;
+        width: 70%;
+        display: block;
+        margin: auto; 
     }
 }
 
