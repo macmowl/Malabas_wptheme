@@ -214,8 +214,5 @@ register_sidebar( array(
         'after_title' => '</p>',
      ));
 }
-<<<<<<< HEAD
-=======
 
 	
->>>>>>> header
