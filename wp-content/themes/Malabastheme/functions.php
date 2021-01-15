@@ -134,6 +134,7 @@ add_action( 'admin_menu', 'malabas_remove_menu_pages' );
 
 // Add image size
 add_image_size( 'square_menu', 256, 256, false);
+
 // Disable Gutenberg editor
 add_filter("use_block_editor_for_post_type", "disable_gutenberg_editor");
 function disable_gutenberg_editor()

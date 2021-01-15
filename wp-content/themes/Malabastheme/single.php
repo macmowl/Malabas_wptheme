@@ -8,7 +8,7 @@
             <div class="menu__recipe">
                 <div class="menu__recipe--left">
                     <a class="menu__recipe--left-btn" href="<?php echo home_url( '/' ); ?>">← return</a>
-                    <p class="menu__recipe--left-text">15 March 2020</p>
+                    <p class="menu__recipe--left-text"><?php echo get_the_date(); ?></p>
                 </div>
                 <p class="menu__recipe--left-text">Local food</p>
             </div>
@@ -32,7 +32,7 @@
                 <div class="ingredient__Text"><?php the_field("ingredients"); ?></div>
             </div>
 
-            <div>
+            <div class="box__Instructions">
                 <h2>Instruction :</h2>
                 <?php
                     if( have_rows('instructions') ):
@@ -44,13 +44,19 @@
                                     <p class= "instructionNumberP"><?= $instruction_number++ ?></p>
                                 </div>
                                 <div>
-                                    <p><?= get_sub_field( 'instruction', false ); ?></p>
-                                    <?php
-                                        $image = get_sub_field('img');
-                                        if( $image ) {
-                                            ?><img src=<?= $image; ?>><?php
-                                        }
-                                    ?>
+                                    <div class="instru"><?= get_sub_field( 'instruction', false ); ?></div>
+                                        
+                                            <?php
+                                                $image = get_sub_field('img');
+                                                if( $image ) {
+                                                    ?>
+                                                        <!-- <div class="boxImgInstruction"> -->
+                                                            <img class="imgInstruction" src=<?= $image; ?>>
+                                                        <!-- </div> -->
+                                                    <?php
+                                                }
+                                            ?>
+                                        
                                 </div>
                             </div>
                         <?php endwhile; ?>
@@ -63,10 +69,6 @@
 
 
     </section>
-
-
-
-
 
 
 
