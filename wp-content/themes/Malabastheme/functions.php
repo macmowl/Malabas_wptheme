@@ -39,6 +39,14 @@ function malabas_register_assets() {
         '1.0', 
         true
     );
+
+    wp_enqueue_script( 
+        'javascript', 
+        'http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js', 
+        array(), 
+        '1.0', 
+        true
+    );
     
     // Déclarer style.css à la racine du thème
     wp_enqueue_style( 
@@ -234,4 +242,15 @@ register_sidebar( array(
         'before_title' => '<p class="site__social__sidebar__title">',
         'after_title' => '</p>',
      ));
+}
+
+// Limit except length to X characters.
+function get_excerpt( $count ) {
+    $permalink = get_permalink($post->ID);
+    $excerpt = get_the_content();
+    $excerpt = strip_tags($excerpt);
+    $excerpt = substr($excerpt, 0, $count);
+    $excerpt = substr($excerpt, 0, strripos($excerpt, " "));
+    $excerpt = '<p>'.$excerpt.'... </p><div class="lastrecipe__infos-link"><div class="lastrecipe__infos-dash"></div><a class="lastrecipe__infos-readmore" href="'.$permalink.'">Read More</a></div>';
+    return $excerpt;
 }
