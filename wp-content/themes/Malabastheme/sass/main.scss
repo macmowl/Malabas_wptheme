@@ -267,8 +267,14 @@ body
 
     &__images {
 
+        @include medium {
+            max-width: 60%;
+            margin: 0 auto;
+        }
+
         @include extralarge{
-            grid-area: images
+            grid-area: images;
+            max-width: none;
         }
 
         img {
@@ -318,12 +324,6 @@ body
 .latestrecipes {
     width: 100%;
     padding-top: 6rem;
-
-    // @include extralarge {
-    //     display: grid;
-    //     grid-template-columns: 1fr 1200px 1fr;
-    //     grid-template-areas: " . main . ";
-    // }
 
     &__subtitle {
         font-weight: 300;
