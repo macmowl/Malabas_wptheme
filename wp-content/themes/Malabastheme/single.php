@@ -7,10 +7,10 @@
 
             <div class="menu__recipe">
                 <div class="menu__recipe--left">
-                    <a class="menu__recipe--left-btn" href="<?php echo home_url( '/' ); ?>">← return</a>
+                    <a class="menu__recipe--left-btn" href="<?php echo home_url( '/' ); ?>">Return</a>
                     <p class="menu__recipe--left-text"><?php echo get_the_date(); ?></p>
                 </div>
-                <p class="menu__recipe--left-text">Local food</p>
+                <p class="menu__recipe--left-text"><?php the_tags($before = ''); ?></p>
             </div>
 
 
@@ -27,13 +27,21 @@
     <section class="recipe__SectionIngredient">
         <section class="box__IngredientEtInstructions">
             <div class="box__Ingredient">
-                <h2>Ingredients :</h2>
-                <h4>Pour 4 personnes :</h4>
+
+                <div class="boxImgSocialMedia">
+                    <a href="#"><img class="imgFace" src="/malabas/wp-content/themes/Malabastheme/assets/svg/facebook2.svg" alt="facebook"></a>
+                    <a href="#"><img class="imgFace" src="/malabas/wp-content/themes/Malabastheme/assets/svg/twitter2.svg" alt="twitter"></a>
+                    <a href="#"><img class="imgFace" src="/malabas/wp-content/themes/Malabastheme/assets/svg/instagram2.svg" alt="instagram"></a>
+                    <a href="#"><img class="imgFace" src="/malabas/wp-content/themes/Malabastheme/assets/svg/email.svg" alt="mail"></a>
+                </div>
+
+                <h2 class="title__Ingredients">Ingredients :</h2>
+                <h4 class="nbrPersons">Pour 4 personnes :</h4>
                 <div class="ingredient__Text"><?php the_field("ingredients"); ?></div>
             </div>
 
             <div class="box__Instructions">
-                <h2>Instruction :</h2>
+                <h2 class="title__Instructions">Instructions :</h2>
                 <?php
                     if( have_rows('instructions') ):
                         $instruction_number = 1; ?>
