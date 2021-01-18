@@ -2,16 +2,17 @@
 
 .hero {
     width: 100%;
-    height: 87vh;
+    height: 92vh;
     text-align: left;
     color: $white;
     overflow: hidden;
     background-size: cover;
     background-position: bottom center;
     padding: 7rem 3.2rem 0 3.2rem;
+    margin-top: -70px;
 
     @include medium {
-        padding: 7rem 5rem 0 5rem;
+        padding: 8rem 5rem 0 5rem;
     }
     
     @include extralarge {
