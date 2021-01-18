@@ -26,8 +26,10 @@
                         echo wp_get_attachment_image( $image_id['ID'], 'medium' );
                     }
                 ?>
-                <h3 class="usps-wrapper__usp-title"><?php the_field( 'hero_title' ); ?></h3>
-                <p class="usps-wrapper__usp-desc"><?php the_field( 'hero_description' ); ?></p>
+                <div class="usps-wrapper__usp-wrapper">
+                    <h3 class="usps-wrapper__usp-title"><?php the_field( 'hero_title' ); ?></h3>
+                    <p class="usps-wrapper__usp-desc"><?php the_field( 'hero_description' ); ?></p>
+                </div>
             </div>
             <div class="usps-wrapper__usp" id="usp2">
                 <?php
@@ -36,8 +38,10 @@
                         echo wp_get_attachment_image( $image_id['ID'], 'medium' );
                     }
                 ?>
-                <h3 class="usps-wrapper__usp-title"><?php the_field( 'hero_title2' ); ?></h3>
-                <p class="usps-wrapper__usp-desc"><?php the_field( 'hero_description2' ); ?></p>
+                <div class="usps-wrapper__usp-wrapper">
+                    <h3 class="usps-wrapper__usp-title"><?php the_field( 'hero_title2' ); ?></h3>
+                    <p class="usps-wrapper__usp-desc"><?php the_field( 'hero_description2' ); ?></p>
+                </div>
             </div>
             <div class="usps-wrapper__usp" id="usp3">
                 <?php
@@ -46,8 +50,10 @@
                         echo wp_get_attachment_image( $image_id['ID'], 'medium' );
                     }
                 ?>
-                <h3 class="usps-wrapper__usp-title"><?php the_field( 'hero_title3' ); ?></h3>
-                <p class="usps-wrapper__usp-desc"><?php the_field( 'hero_description3' ); ?></p>
+                <div class="usps-wrapper__usp-wrapper">
+                    <h3 class="usps-wrapper__usp-title"><?php the_field( 'hero_title3' ); ?></h3>
+                    <p class="usps-wrapper__usp-desc"><?php the_field( 'hero_description3' ); ?></p>
+                </div>
             </div>
         </div>
         

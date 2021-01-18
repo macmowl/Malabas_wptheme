@@ -80,6 +80,12 @@
     padding-bottom: 60px;
     overflow: visible;
 
+    @include medium {
+        display: flex;
+        flex-direction: row;
+
+    }
+
     @include extralarge {
         display: grid;
         grid-template-columns: 1fr 1200px 1fr;
@@ -91,6 +97,8 @@
     &-wrapper {
         overflow: visible;
 
+        
+
         @include extralarge {
             grid-area: main;
             display: flex;
@@ -99,11 +107,21 @@
         }
 
         &__usp {
-            width: 75%;
+            width: 100%;
             margin: 0 auto;
             margin-top: 60px;
             z-index: 1000;
             background-color: $white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            @include medium {
+                text-align: left;
+                flex-direction: row;
+                width: 75%;
+            }
     
             @include extralarge {
                 border-radius: 2.5rem 2.5rem 0 0;
@@ -119,6 +137,8 @@
                 z-index: 1000;
                 padding: 60px 30px 30px 30px;
                 width: 30%;
+                text-align: center;
+                display: block;
     
             }
 
@@ -130,6 +150,22 @@
                 }
 
             }
+
+            &-wrapper {
+                width: 50%;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+
+                @include medium {
+                    margin-left: 30px;
+                }
+
+                @include extralarge {
+                    width: 100%;
+                    margin-left: 0;
+                }
+            }
     
             &-title {
                 margin-top: 15px;
@@ -138,7 +174,7 @@
             &-desc {
                 display: none;
     
-                @include extralarge {
+                @include medium {
                     display: block;
                 }
             }
