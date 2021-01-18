@@ -9,7 +9,6 @@
 
 body {
   font-family: "Poppins";
-  max-width: 125rem;
 }
 
 .admin-bar .menu {
@@ -21,6 +20,7 @@ body {
 .site__header {
   display: flex;
   justify-content: space-between;
+  background-color: #1a1a1a;
 }
 .site__header__logo {
   margin-top: 2rem;
@@ -52,7 +52,7 @@ body {
   color: #1a1a1a;
 }
 .site__header__menu li a {
-  color: #FFF;
+  color: #eae5e5;
   text-decoration: none;
 }
 
@@ -91,14 +91,15 @@ body {
   font-weight: bold;
 }
 .newsletter__form__mail, .newsletter__form__submit {
-  margin-top: 2rem;
-  height: 2rem;
+  margin-top: 1rem;
+  height: 4rem;
   border: 1px solid #1a1a1a;
   text-align: center;
   border-radius: 0.5rem;
+  font-size: 1.8rem;
 }
 .newsletter__form__submit {
-  width: 8rem;
+  width: 12rem;
 }
 .newsletter__form__submit p {
   font-weight: bold;
@@ -124,6 +125,10 @@ body {
   flex-wrap: wrap;
   flex: 25%;
 }
+.site__footer p, .site__footer b {
+  color: white;
+  font-size: 1.6rem;
+}
 .site__footer .footer__intro {
   margin-right: 5rem;
 }
@@ -148,7 +153,7 @@ body {
   font-weight: bold;
 }
 .site__footer .footer__open__hours__repeater__line {
-  border-bottom: 1px solid #FFF;
+  border-bottom: 1px solid #eae5e5;
   width: 30%;
 }
 .site__footer .footer__open__hours__flex {
@@ -159,7 +164,7 @@ body {
   width: 20rem;
 }
 .site__footer .footer__contact {
-  margin-left: 2rem;
+  margin-left: 4rem;
 }
 .site__footer .footer__contact__phone {
   margin-top: 1rem;
@@ -185,7 +190,7 @@ body {
   padding-top: 2rem;
 }
 .site__footer__part__two__line {
-  border-top: 1px solid #FFF;
+  border-top: 1px solid #eae5e5;
   width: 70%;
   display: block;
   margin: auto;

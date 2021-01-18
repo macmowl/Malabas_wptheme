@@ -1,7 +1,7 @@
 <div class="newsletter"><?php get_template_part( 'parts/newsletter' ); ?></div>
 
 <footer class="site__footer"> 
-    <img class="footer__img" src="<?php echo get_template_directory_uri(); ?>/assets/images/hachures-noires.png"/>
+    <!-- <img class="footer__img" src="<?php echo get_template_directory_uri(); ?>/assets/images/hachures-noires.png"/> -->
             <div class="footer__intro">
                     <p class="footer__intro__logo">DEV RESTAURANT</p>
                         
@@ -43,7 +43,9 @@
             </div>
             
             <div class="footer__instagram">
-                    <?php dynamic_sidebar( 'single-sidebar' ); ?>
+            <?php echo do_shortcode('[iscwp-grid username="best.burgers.insta" grid="3" limit="6"]'); ?>
+           
+                    
             </div>
        </div>
        
