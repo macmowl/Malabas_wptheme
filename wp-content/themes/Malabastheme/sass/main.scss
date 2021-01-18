@@ -92,7 +92,8 @@ body
         &__img
         {
             position: relative; 
-            
+            width: 100%;
+            height: 40%;
         }
     }
     &__form
@@ -148,7 +149,7 @@ body
     color: white;
     display: flex;
     flex-wrap:wrap;
-    flex: 25%;
+    justify-content: space-around;
     p, b{
         color: white;
         font-size: 1.6rem;
@@ -187,7 +188,7 @@ body
     .footer__open__hours__repeater__line
     {
         border-bottom: 1px solid $white;
-        width: 30%;
+        width: 40%!important;
         
     }
     .footer__open__hours__flex
@@ -222,6 +223,24 @@ body
         margin-top: 1rem;
     }
 } 
+.iscwp-img
+{   height: 100%;
+    width: auto!important;
+    &-link
+    {
+        margin:0rem!important;
+        display:none!important;
+    }
+    &-wrp
+    {   height:10rem!important;
+        margin:0rem!important;}
+}
+
+.iscwp-meta
+{
+   display: none!important;
+}						
+
 .site__footer__part__two 
 {
     background-color: $black;

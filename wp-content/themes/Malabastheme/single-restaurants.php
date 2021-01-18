@@ -6,14 +6,16 @@
             
         ?>
         <section class="banneer_image" style="background-image: url('<?= $image_id['url']?>');">
-            <h2 class="subtitle"><?php the_field("subtitle_restaurant");?></h2>
-            <h1><?php the_field("title_restaurant"); ?></h1>
-            <p><?php the_field("city_restaurant")?></p>
+            <div class="hero__wrapper">
+                <h2 class="hero__wrapper__subtitle"><?php the_field("subtitle_restaurant");?></h2>
+                <h1 class="hero__wrapper__title"><?php the_field("title_restaurant"); ?></h1>
+                <p><?php the_field("city_restaurant")?></p>
+            </div>
         </section>
         <div class="presentation">
                 <div class="presentation__intro">
-                    <p>Welcome in <?php the_field("city_restaurant"); ?></p>
-                    <p>PRESENTATION</p>
+                    <p class="presentation__intro__welcome">Welcome in <?php the_field("city_restaurant"); ?></p>
+                    <p class="presentation__intro__bold">PRESENTATION</p>
                 </div>
             <?php if (have_rows("presentation_repeater")): ?>
                 <?php $count = 1; ?>
@@ -27,7 +29,7 @@
                                 <div class="presentation__board__center__right">
                                     <p class="presentation__board__center__intro"><?php the_sub_field("description_title")?></p>
                                     <p class="presentation__board__center__title"><?php the_sub_field("title_restaurant")?></p>
-                                    <p><?php the_sub_field("text_choice"); ?></p>
+                                    <p class="presentation__board__center__text"><?php the_sub_field("text_choice"); ?></p>
                                 </div>
                             </div>
                         </div>
@@ -37,7 +39,7 @@
                                 <div class="presentation__board__center__left">
                                 <p class="presentation__board__center__intro"><?php the_sub_field("description_title")?></p>
                                     <p class="presentation__board__center__title"><?php the_sub_field("title_restaurant")?></p>
-                                    <p><?php the_sub_field("text_choice"); ?></p>
+                                    <p class="presentation__board__center__text"><?php the_sub_field("text_choice"); ?></p>
                                 </div>
                                 <div class="presentation__board__center__right">
                                     <img class="presentation__board__center__image" src="<?php echo get_sub_field("picture_choice")["url"]; ?>" alt="">
@@ -49,7 +51,11 @@
             <?php endwhile; else: ?>
             <?php endif; ?>   
         </div>
-    
+        <div class="map">
+                <div class="map__intro">
+                    <p>Find Us <?php the_field("city_restaurant"); ?></p>
+                    <p class="map__intro__bold">LOCATION</p>
+                </div>
         <?php 
             $place = get_field( 'places' );
             if( $place ):
@@ -69,6 +75,7 @@
                 echo '<p>' . $address . '.</p>';
                 
         ?>
+        </div>
             <div class="acf-map" data-zoom="<?php echo $zoom; ?>">
                 <div class="marker" data-lat="<?php echo $lat; ?>" data-lng="<?php echo $lng; ?>">
                 </div>

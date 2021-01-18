@@ -1,11 +1,55 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
 * {
   padding: 0;
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 62.5%;
+  color: #292929;
+}
+
+p, a {
+  font-size: 1.6rem;
+  margin-bottom: 1.6rem;
+}
+
+a {
+  color: #FFF;
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 3.2rem;
+  margin-bottom: 3.2rem;
+}
+
+h2 {
+  font-size: 2.8rem;
+  margin-bottom: 2.8rem;
+}
+
+h3 {
+  font-size: 2.4rem;
+  margin-bottom: 2.4rem;
+}
+
+h4 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+body {
+  line-height: 1;
 }
 
 body {
@@ -15,6 +59,11 @@ body {
 .banneer_image {
   width: 100%;
   height: 87vh;
+  overflow: hidden;
+  display: inline-block;
+  background-size: cover;
+  background-position: bottom center;
+  padding: 7rem 3.2rem 0 3.2rem;
 }
 .banneer_image h2, .banneer_image h1, .banneer_image p {
   color: #eae5e5;
@@ -23,12 +72,43 @@ body {
 .banneer_image h2 {
   padding-top: 10vh;
 }
+@media screen and (min-width: 1200px) {
+  .banneer_image {
+    grid-template-columns: 1fr 1200px 1fr;
+    grid-template-areas: ". main .";
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 7rem 0 0 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .banneer_image .hero__wrapper {
+    grid-area: main;
+  }
+}
+.banneer_image .hero__wrapper__title {
+  color: #eae5e5;
+  font-size: 4rem;
+}
+.banneer_image .hero__wrapper__subtitle {
+  color: #eae5e5;
+}
 
+.presentation {
+  background-color: #f2f3f4;
+}
 .presentation__intro {
   font-size: 3rem;
   text-align: center;
+  padding-top: 3rem !important;
 }
-
+.presentation__intro__welcome {
+  font-size: 1.8rem;
+}
+.presentation__intro__bold {
+  font-weight: bolder;
+}
 .presentation__board {
   display: block;
   margin: auto;
@@ -48,18 +128,35 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   border: 1px solid #1a1a1a;
+  margin-top: 2rem;
 }
 .presentation__board__center__left, .presentation__board__center__right {
   width: 100%;
 }
 .presentation__board__center__image {
   width: 100%;
-  height: auto;
-  margin: 0;
+  height: 100%;
 }
 .presentation__board__center__intro {
   font-size: 3rem;
   text-align: center;
+  margin-top: 2rem !important;
+}
+.presentation__board__center__text {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.presentation__board__center__title {
+  text-align: center;
+  padding-top: 2rem;
+}
+
+.map__intro {
+  margin-top: 2rem !important;
+  text-align: center;
+}
+.map__intro__bold {
+  font-weight: bolder;
 }
 
 .acf-map {
