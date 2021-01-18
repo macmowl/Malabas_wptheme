@@ -1,16 +1,11 @@
 @charset "UTF-8";
-<<<<<<< HEAD
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
-=======
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap");
->>>>>>> 3ddc8fa5a0fb53371ce9a42c4e44b2a3503d3d4b
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-<<<<<<< HEAD
-=======
   font-size: 62.5%;
   color: #292929;
 }
@@ -55,7 +50,12 @@ body {
   color: #FFF;
   padding: 15px 20px;
   font-size: 1.6rem;
->>>>>>> 3ddc8fa5a0fb53371ce9a42c4e44b2a3503d3d4b
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -232,7 +232,6 @@ body {
   margin-top: 1rem;
 }
 
-<<<<<<< HEAD
 .site__footer__part__two {
   background-color: #1a1a1a;
 }
@@ -246,7 +245,8 @@ body {
   width: 70%;
   display: block;
   margin: auto;
-=======
+}
+
 .menufront {
   text-align: center;
   width: 100%;
@@ -268,9 +268,16 @@ body {
     display: none;
   }
 }
+@media screen and (min-width: 768px) {
+  .menufront__images {
+    max-width: 60%;
+    margin: 0 auto;
+  }
+}
 @media screen and (min-width: 1200px) {
   .menufront__images {
     grid-area: images;
+    max-width: none;
   }
 }
 .menufront__images img {
@@ -320,8 +327,8 @@ body {
 }
 .latestrecipes__title {
   text-transform: uppercase;
-  margin-bottom: 3rem;
   text-align: center;
+  margin-bottom: 0px;
 }
 @media screen and (min-width: 768px) {
   .latestrecipes-wrapper {
@@ -331,9 +338,16 @@ body {
     flex-wrap: wrap;
   }
 }
+@media screen and (min-width: 1200px) {
+  .latestrecipes-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
 
 .lastrecipe {
-  background-color: #FFF;
+  background-color: white;
+  margin-top: 3rem;
 }
 @media screen and (min-width: 768px) {
   .lastrecipe {
@@ -341,20 +355,36 @@ body {
     width: 48%;
   }
 }
+@media screen and (min-width: 1200px) {
+  .lastrecipe {
+    width: 24%;
+  }
+}
 .lastrecipe__img-wrapper {
   width: 100%;
-  height: auto;
+  height: 200px;
+  overflow: hidden;
+}
+@media screen and (min-width: 992px) {
+  .lastrecipe__img-wrapper {
+    height: 170px;
+  }
 }
 .lastrecipe__img-wrapper .wp-post-image {
-  max-width: 100%;
   height: auto;
+  width: 100%;
 }
 .lastrecipe__infos {
-  padding: 24px 32px 32px 32px;
+  padding: 24px 32px 10px 32px;
+}
+@media screen and (min-width: 1200px) {
+  .lastrecipe__infos {
+    padding: 24px 16px 10px 16px;
+  }
 }
 .lastrecipe__infos-date {
   color: #7b7b7b;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 .lastrecipe__infos-date img {
   width: 14px;
@@ -374,15 +404,15 @@ body {
 .lastrecipe__infos-dash {
   grid-area: dash;
   height: 1px;
-  border-bottom: 1px dashed #292929;
+  border-bottom: 1px dashed #1a1a1a;
   margin-top: 4px;
 }
 .lastrecipe__infos-readmore {
   grid-area: link;
-  color: #292929;
+  color: #1a1a1a;
   text-transform: uppercase;
   text-align: right;
   font-weight: bold;
   margin-top: 10px;
->>>>>>> 3ddc8fa5a0fb53371ce9a42c4e44b2a3503d3d4b
+  margin-bottom: 0px;
 }

@@ -1,4 +1,4 @@
-<section class="menufront2">
+<section class="menufront">
         <div class="menufront__mobile">
             <p class="menufront__mobile__infos-subtitle">
                 <?php the_field( 'menu_subtitle' ); ?>

@@ -8,7 +8,7 @@
         $args = array(
             'post_type' => 'post',
             'category_name' => 'recipe',
-            'posts_per_page' => 3,
+            'posts_per_page' => 4,
         );
 
         // 2. On exécute la WP Query
