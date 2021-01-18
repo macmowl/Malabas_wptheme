@@ -1,3 +1,5 @@
+@import 'reset';
+
 *{
     padding: 0;
     margin: 0;
@@ -243,7 +245,7 @@ body
 
 // ------------ Discover Menu Part ----------
 
-.menufront2 {
+.menufront {
     text-align: center;
     width: 100%;
     padding: 6rem 3.2rem 6rem 3.2rem;
@@ -317,6 +319,12 @@ body
     width: 100%;
     padding-top: 6rem;
 
+    // @include extralarge {
+    //     display: grid;
+    //     grid-template-columns: 1fr 1200px 1fr;
+    //     grid-template-areas: " . main . ";
+    // }
+
     &__subtitle {
         font-weight: 300;
         text-align: center;
@@ -324,8 +332,8 @@ body
 
     &__title {
         text-transform: uppercase;
-        margin-bottom: 3rem;
         text-align: center;
+        margin-bottom: 0px;
     }
 
     &-wrapper {
@@ -336,13 +344,19 @@ body
             justify-content: space-between;
             flex-wrap: wrap;
         }
+
+        @include extralarge {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
         
     }
     
 }
 
 .lastrecipe {
-    background-color: $white;
+    background-color: white;
+    margin-top: 3rem;
 
     @include medium {
         box-shadow:
@@ -356,23 +370,35 @@ body
         width: 48%;
     }
 
+    @include extralarge {
+        width: 24%;
+    }
+
     &__img-wrapper {
         width: 100%;
-        height: auto;
+        height: 200px;
+        overflow: hidden;
+
+        @include large {
+            height: 170px;
+        }
         
         .wp-post-image {
-
-            max-width: 100%;
             height: auto;
+            width: 100%;
         }
     }
 
     &__infos {
-        padding: 24px 32px 32px 32px;
+        padding: 24px 32px 10px 32px;
+
+        @include extralarge {
+            padding: 24px 16px 10px 16px;
+        }
         
         &-date {
             color: #7b7b7b;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
 
             img {
                 width: 14px;
@@ -407,6 +433,7 @@ body
             text-align: right;
             font-weight: bold;
             margin-top: 10px;
+            margin-bottom: 0px;
         }
     }
 }
