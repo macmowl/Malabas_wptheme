@@ -57,12 +57,12 @@ body {
   overflow: hidden;
   background-size: cover;
   background-position: bottom center;
-  padding: 7rem 3.2rem 0 3.2rem;
+  padding: 9rem 3.2rem 0 3.2rem;
   margin-top: -70px;
 }
 @media screen and (min-width: 768px) {
   .hero {
-    padding: 8rem 5rem 0 5rem;
+    padding: 10rem 8rem 0 8rem;
   }
 }
 @media screen and (min-width: 1200px) {
