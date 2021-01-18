@@ -43,6 +43,8 @@
             </div>
             
             <div class="footer__instagram">
+            <?php echo do_shortcode('[iscwp-grid username="best.burgers.insta" grid="3" limit="6"]'); ?>
+           
                     
             </div>
        </div>

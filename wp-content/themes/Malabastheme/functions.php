@@ -84,6 +84,20 @@ function malabas_register_assets() {
         array(), 
         '1.0'
     );
+    
+    
+     wp_enqueue_script( 'gmap',
+      "https://maps.googleapis.com/maps/api/js?key=" . MALABAS_GMAP_API_KEY, 
+      array(), 
+      '1.0', 
+      true );
+      
+    wp_enqueue_script( 'malabas-map',
+     get_template_directory_uri() . '/js/map.js',
+     array( 'gmap', 'jquery' ), 
+     '1.0', true );
+    
+  
 }
 add_action( 'wp_enqueue_scripts', 'malabas_register_assets' );
 
@@ -123,7 +137,7 @@ register_nav_menus( array(
 
 // Change dashboard Articles to Recipes
 function malabas_change_post_object() {
-    $get_post_type = get_post_type_object('post'); //NB changer le nom .... donc changer la fonction, p ê transformer comme lg 71
+    $get_post_type = get_post_type_object('post'); 
     $labels = $get_post_type->labels;
         $labels->name = 'Recipes';
         $labels->singular_name = 'Recipe';

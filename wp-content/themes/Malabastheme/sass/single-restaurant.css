@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
 * {
@@ -59,5 +60,17 @@ body {
 .presentation__board__center__intro {
   font-size: 3rem;
   text-align: center;
+}
+
+.acf-map {
+  width: 100%;
+  height: 40rem;
+  border: #ccc solid 1px;
+  margin: 2rem 0;
+}
+
+.acf-map img {
+  max-width: inherit !important;
+  /* Corrige un souci de conflit avec le thème sinon le petit bonhomme de StreetView s’en retrouve tout déformé*/
 }
 /*# sourceMappingURL=single-restaurant.css.map */

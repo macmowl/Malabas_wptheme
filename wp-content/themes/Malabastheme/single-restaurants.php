@@ -50,8 +50,32 @@
             <?php endif; ?>   
         </div>
     
-       
-                    
+        <?php 
+            $place = get_field( 'places' );
+            if( $place ):
+                $lat = esc_attr( $place['lat'] );
+                $lng = esc_attr( $place['lng'] );
+                $zoom = esc_attr($place['zoom']);
+                //TODO address ne fonctionne pas ! (lg 59 à 70)
+                $address = '';
+                foreach( array('street_number', 'street_name', 'city', 'state', 'post_code', 'country') as $i => $k ) {
+                    if( isset( $place[ $k ] ) ) {
+                        $address = sprintf( '<span class="segment-%s">%s</span>, ', $k, $place[ $k ] );
+                    }
+                }
+            
+                // Trim trailing comma.
+                $address = trim( $address, ', ' );
+                echo '<p>' . $address . '.</p>';
+                
+        ?>
+            <div class="acf-map" data-zoom="<?php echo $zoom; ?>">
+                <div class="marker" data-lat="<?php echo $lat; ?>" data-lng="<?php echo $lng; ?>">
+                </div>
+            </div>
+
+        <?php endif; ?>
+                            
         
 
 
