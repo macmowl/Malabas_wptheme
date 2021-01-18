@@ -1,5 +1,5 @@
 
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
 //_____________________________________________variables________________________________
 $white :#FFF;
 $black : #292929;
@@ -47,7 +47,7 @@ $breakpoints: (
 
 p, a {
     font-size: 1.6rem;
-    margin-bottom: 1.6rem;
+    line-height: 2.8rem;
 }
 
 a {
@@ -57,24 +57,32 @@ a {
 
 h1 {
     font-size: 3.2rem;
-    margin-bottom: 3.2rem;
+    line-height: 4.6rem;
 }
 
 h2 {
     font-size: 2.8rem;
-    margin-bottom: 2.8rem;
+    line-height: 4rem;
 }
 
 h3 {
     font-size: 2.4rem;
-    margin-bottom: 2.4rem;
+    line-height: 3.2rem;
 }
 
 h4 {
     font-size: 2rem;
-    margin-bottom: 2rem;
+    line-height: 2.8rem;
 }
 
 body {
     line-height: 1;
+}
+
+.btn {
+    border: 0;
+    background-color: $black;
+    color: $white;
+    padding: 15px 20px;
+    font-size: 1.6rem
 }

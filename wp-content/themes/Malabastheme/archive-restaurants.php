@@ -1,10 +1,9 @@
-
 <?php get_header(); ?>
 
 <h1 class="site__heading"><?php post_type_archive_title(); ?></h1>
 
 <main class="site__portfolio">
-    <?php if( have_posts() ) : while( have_posts() ) : the_post(); ?>
+	<?php if( have_posts() ) : while( have_posts() ) : the_post(); ?>
         <!-- Tu peux modifier de ici -->
         <h2>
             <a href="<?php the_permalink(); ?>">
