@@ -107,8 +107,8 @@ body
             font-size: 2rem;
             color: #efefef;
             width: 10rem;
-            font-family: "Poppins:wght@700";
-            font-weight: bold;
+            font-family: "Poppins";
+            font-weight: 700;
         }
         &__mail , &__submit
         {
@@ -195,10 +195,15 @@ body
     {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
         flex: 33%;
-        width: 20rem;
+        width: 35rem;
+        margin: 1rem;
     }
+    .footer__open__hours__flex p 
+    {
+        margin: 0;
+        padding: 0;
+    };
     .footer__contact
     {
         margin-left: 4rem;

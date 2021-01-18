@@ -56,9 +56,13 @@ body {
   font-family: "Poppins";
 }
 
-.banneer_image {
-  width: 100%;
+.banneer {
   height: 87vh;
+}
+
+.banneer_image {
+  height: 87vh;
+  width: 100%;
   overflow: hidden;
   display: inline-block;
   background-size: cover;
@@ -68,35 +72,43 @@ body {
 .banneer_image h2, .banneer_image h1, .banneer_image p {
   color: #eae5e5;
   text-align: center;
+  position: relative;
+  z-index: 2;
 }
 .banneer_image h2 {
   padding-top: 10vh;
 }
-@media screen and (min-width: 1200px) {
-  .banneer_image {
-    grid-template-columns: 1fr 1200px 1fr;
-    grid-template-areas: ". main .";
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    padding: 7rem 0 0 0;
-  }
+.banneer_image::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.2;
+  z-index: -20;
+}
+
+.hero__wrapper {
+  -webkit-filter: initial;
+          filter: initial;
 }
 @media screen and (min-width: 1200px) {
-  .banneer_image .hero__wrapper {
+  .hero__wrapper {
     grid-area: main;
   }
 }
-.banneer_image .hero__wrapper__title {
+.hero__wrapper__title {
   color: #eae5e5;
   font-size: 4rem;
 }
-.banneer_image .hero__wrapper__subtitle {
+.hero__wrapper__subtitle {
   color: #eae5e5;
 }
 
 .presentation {
   background-color: #f2f3f4;
+  padding: 5rem 0;
 }
 .presentation__intro {
   font-size: 3rem;
@@ -127,7 +139,9 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  border: 1px solid #1a1a1a;
+  border: 1px solid grey;
+  -webkit-box-shadow: 5px 1px 0px grey;
+          box-shadow: 5px 1px 0px grey;
   margin-top: 2rem;
 }
 .presentation__board__center__left, .presentation__board__center__right {

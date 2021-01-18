@@ -108,8 +108,8 @@ body {
   font-size: 2rem;
   color: #efefef;
   width: 10rem;
-  font-family: "Poppins:wght@700";
-  font-weight: bold;
+  font-family: "Poppins";
+  font-weight: 700;
 }
 .newsletter__form__mail, .newsletter__form__submit {
   margin-top: 1rem;
@@ -192,13 +192,15 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   -webkit-box-flex: 33%;
       -ms-flex: 33%;
           flex: 33%;
-  width: 20rem;
+  width: 35rem;
+  margin: 1rem;
+}
+.site__footer .footer__open__hours__flex p {
+  margin: 0;
+  padding: 0;
 }
 .site__footer .footer__contact {
   margin-left: 4rem;

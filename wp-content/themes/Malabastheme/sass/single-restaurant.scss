@@ -19,32 +19,47 @@ body
     font-family:"Poppins";
 
 }
+.banneer
+{
+    height:87vh;
+}
 .banneer_image
 {
-    h2, h1, p{
+    height:87vh;
+    h2, h1, p
+    {
         color: $white;
         text-align:center;
-    };
+        position:relative;
+        z-index: 2;
+    }
     h2
     {
        padding-top: 10vh;
     }
   width: 100%;
-  height: 87vh;
   overflow: hidden;
   display: inline-block;
   background-size: cover;
   background-position: bottom center;
   padding: 7rem 3.2rem 0 3.2rem;
-  @include extralarge {
-    grid-template-columns: 1fr map-get($breakpoints, extralarge) 1fr;
-    grid-template-areas: ". main .";
-    justify-content: center;
-    padding: 7rem 0 0 0;
+  
+  &::before{
+    content: "";
+    //filter: brightness(50%);
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.2;
+    z-index: -20;
+    }
+    
 }
 
 .hero__wrapper {
-    
+   filter: initial;
     @include extralarge {
         grid-area: main;
     }
@@ -57,13 +72,13 @@ body
     &__subtitle {
         color: $white;
     }
-
+    
 }
 
-}
+
 .presentation{
     background-color: #f2f3f4;
-
+    padding: 5rem 0;
     &__intro
     {
         font-size: 3rem;
@@ -95,7 +110,8 @@ body
     display: flex;
     flex-direction: row;
     justify-content: center;
-    border: 1px solid $black;
+    border: 1px solid grey;
+    box-shadow: 5px 1px 0px grey;
     margin-top: 2rem;
     &__left, &__right
     {
