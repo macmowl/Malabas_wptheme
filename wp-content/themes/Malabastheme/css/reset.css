@@ -7,7 +7,7 @@
   color: #292929;
 }
 
-p, a {
+p, a, input, ul, li, label {
   font-size: 1.6rem;
   line-height: 2.8rem;
 }

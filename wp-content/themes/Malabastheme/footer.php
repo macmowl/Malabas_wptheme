@@ -50,12 +50,12 @@
        </div>
        
 </footer>
+
 <div class="site__footer__part__two">
     <div class="site__footer__part__two__line">
-        <p>Tous droits réservés à la Malabas Team <p>
-    </div>
-           
+        <p>Tous droits réservés à la Malabas Team<p>
+    </div>     
 </div>
-	<?php wp_footer(); ?>
+<?php wp_footer(); ?>
 </body>
 </html>
