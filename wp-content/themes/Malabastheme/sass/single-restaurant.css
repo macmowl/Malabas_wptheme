@@ -18,7 +18,7 @@
   color: #292929;
 }
 
-p, a {
+p, a, input, ul, li, label {
   font-size: 1.6rem;
   margin-bottom: 1.6rem;
 }
@@ -154,11 +154,12 @@ body {
 .presentation__board__center__intro {
   font-size: 3rem;
   text-align: center;
-  margin-top: 2rem !important;
+  margin-top: 3rem !important;
 }
 .presentation__board__center__text {
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  line-height: 4rem;
 }
 .presentation__board__center__title {
   text-align: center;
@@ -175,7 +176,7 @@ body {
 
 .acf-map {
   width: 100%;
-  height: 40rem;
+  height: 84rem;
   border: #ccc solid 1px;
   margin: 2rem 0;
 }
@@ -183,5 +184,96 @@ body {
 .acf-map img {
   max-width: inherit !important;
   /* Corrige un souci de conflit avec le thème sinon le petit bonhomme de StreetView s’en retrouve tout déformé*/
+}
+
+.part_book {
+  position: relative;
+}
+
+.book {
+  display: block;
+  margin: auto;
+}
+.book__intro {
+  text-align: center;
+}
+
+.reserve {
+  background-color: #f2f3f4;
+  width: 50rem;
+  height: auto;
+  position: absolute;
+  top: 15rem;
+  right: 35rem;
+  z-index: 10;
+}
+.reserve form > .reserve__line__1, .reserve .reserve__line__2, .reserve .reserve__line__4 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.reserve form > .reserve__line__1 input, .reserve .reserve__line__2 input, .reserve .reserve__line__4 input {
+  width: 100%;
+}
+.reserve .reserve__line__1 > :nth-child(2), .reserve .reserve__line__2 > :nth-child(2), .reserve .reserve__line__4 > :nth-child(2) {
+  margin-left: 1rem;
+}
+.reserve form {
+  padding-top: 5rem;
+  margin-left: 5rem;
+  padding-bottom: 5rem;
+}
+.reserve form input, .reserve form select {
+  border: none;
+  height: 4rem;
+  margin-top: -0.5rem;
+  font-family: "Poppins";
+}
+.reserve form select {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  height: 3rem;
+}
+.reserve form label {
+  margin-right: 1rem;
+  display: block;
+  height: 4rem;
+  margin-bottom: -1rem;
+}
+.reserve form textarea {
+  width: 80%;
+  height: 5rem;
+  border: none;
+  font-size: 1.6rem;
+  font-family: "Poppins";
+}
+.reserve form .trip-start, .reserve form time {
+  font-size: 1.6rem;
+}
+.reserve form .submit {
+  margin-top: 2rem;
+  margin-left: -5rem;
+}
+.reserve form .submit__btn {
+  background-color: #1a1a1a;
+  color: #eae5e5;
+  display: block;
+  margin: auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  border-radius: 2rem;
+}
+
+.image_register {
+  width: 70rem;
+  height: auto;
+  z-index: 9;
+  margin-left: 20vw;
 }
 /*# sourceMappingURL=single-restaurant.css.map */

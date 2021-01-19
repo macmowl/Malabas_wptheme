@@ -2,7 +2,8 @@
 * {
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   font-size: 62.5%;
   color: #292929;
 }
@@ -40,3 +41,4 @@ h4 {
 body {
   line-height: 1;
 }
+/*# sourceMappingURL=reset.css.map */
