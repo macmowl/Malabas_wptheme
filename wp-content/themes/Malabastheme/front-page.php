@@ -84,36 +84,39 @@
     <section class="restaurants">
         <h3 class="restaurants__subtitle">Discover our franchise</h3>
         <h2 class="restaurants__title">Our restaurants</h2>
-        <?php 
-            $args = array(
-                'post_type' => 'restaurants',
-                'posts_per_page' => 4,
-                'order' => 'DESC'
-            );
+        <div class="restaurants-wrapper">
+            <?php 
+                $args = array(
+                    'post_type' => 'restaurants',
+                    'posts_per_page' => 4,
+                    'order' => 'DESC'
+                );
 
-            $my_query = new WP_Query( $args );
+                $my_query = new WP_Query( $args );
+                $id_grid = 0;
+                if( $my_query->have_posts() ) : while( $my_query->have_posts() ) : $my_query->the_post();
+            ?>
+            <div class="resto-item" id="resto<?= ++$id_grid; ?>">
+                <div class="resto-item__img-wrapper">
+                    <?php the_post_thumbnail( 'restaurant_mobile_header' ); ?>
+                    
+                </div>
+                <div class="resto-item__infos">
+                    <h4 class="resto-item__infos-subtitle"><?php the_field( 'subtitle_restaurant' ); ?></h4>
+                    <h3 class="resto-item__infos-title"><?php the_title(); ?></h3>
+                    <p class="resto-item__infos-desc"><?php the_field( 'description_place' ); ?></p>
+                    <a href="<?php the_permalink(); ?>" class="btn">More infos</a>
+                </div>
+            </div>
 
-            if( $my_query->have_posts() ) : while( $my_query->have_posts() ) : $my_query->the_post();
-        ?>
-        <div class="resto-item">
-            <div class="resto-item__img-wrapper">
-                <?php the_post_thumbnail( 'restaurant_mobile_header' ); ?>
-                
-            </div>
-            <div class="resto-item__infos">
-                <h4 class="resto-item__infos-subtitle"><?php the_field( 'subtitle_restaurant' ); ?></h4>
-                <h3 class="resto-item__infos-title"><?php the_title(); ?></h3>
-                <p class="resto-item__infos-desc"><?php the_field( 'description_place' ); ?></p>
-                <a href="<?php the_permalink(); ?>" class="btn">More infos</a>
-            </div>
+            <?php
+                endwhile;
+                endif;
+
+                wp_reset_postdata();
+            ?>
         </div>
-
-        <?php
-            endwhile;
-            endif;
-
-            wp_reset_postdata();
-        ?>
+        
     </section>
 
     <?php get_template_part( 'parts/discover-menu' ); ?>

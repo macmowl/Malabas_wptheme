@@ -329,6 +329,36 @@ body {
   text-align: center;
   margin-bottom: 40px;
 }
+@media screen and (min-width: 1200px) {
+  .restaurants-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1200px 1fr;
+    grid-template-areas: " . resto1 . " " . resto2 . " " . resto3 . ";
+    position: relative;
+    row-gap: 60px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  #resto1 {
+    grid-area: resto1;
+    height: 800px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  #resto2 {
+    grid-area: resto2;
+    height: 800px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  #resto3 {
+    grid-area: resto3;
+    height: 800px;
+  }
+}
 
 .resto-item {
   margin-bottom: 80px;
@@ -339,6 +369,12 @@ body {
   .resto-item {
     margin-bottom: 40px;
     height: 650px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .resto-item {
+    grid-area: main;
+    height: 100%;
   }
 }
 @media screen and (min-width: 768px) {

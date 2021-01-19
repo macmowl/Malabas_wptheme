@@ -304,6 +304,41 @@
         text-align: center;
         margin-bottom: 40px;
     }
+
+    &-wrapper {
+        @include extralarge {
+            display: grid;
+            grid-template-columns: 1fr 1200px 1fr;
+            grid-template-areas:    " . resto1 . "
+                                    " . resto2 . "
+                                    " . resto3 . ";
+            position: relative;
+
+            row-gap: 60px;
+        }
+    }
+}
+
+#resto1 {
+    @include extralarge {
+        grid-area: resto1;
+        height: 800px;
+    }
+    
+}
+
+#resto2 {
+    @include extralarge {
+        grid-area: resto2;
+        height: 800px;
+    }
+}
+
+#resto3 {
+    @include extralarge {
+        grid-area: resto3;
+        height: 800px;
+    }
 }
 
 .resto-item {
@@ -314,6 +349,11 @@
     @include medium {
         margin-bottom: 40px;
         height: 650px;
+    }
+
+    @include extralarge {
+        grid-area: main;
+        height: 100%;
     }
 
     &:nth-child(2n+1) {
