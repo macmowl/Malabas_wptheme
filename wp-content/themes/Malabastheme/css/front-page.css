@@ -47,6 +47,11 @@ body {
   color: #FFF;
   padding: 15px 20px;
   font-size: 1.6rem;
+  display: inline-block;
+}
+
+.clear {
+  clear: both;
 }
 
 .hero {
@@ -292,6 +297,107 @@ body {
 .intro-wrapper__info__signature {
   font-weight: 200;
   font-size: 3rem;
+}
+
+.restaurants {
+  width: 100%;
+  background-color: #f5f5f5;
+  text-align: center;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  position: relative;
+  z-index: 0;
+}
+.restaurants::after {
+  content: "";
+  background-image: url("../assets/images/burger_party.png");
+  background-size: 800px;
+  opacity: 0.1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  position: absolute;
+}
+.restaurants__subtitle {
+  font-weight: 300;
+  text-align: center;
+}
+.restaurants__title {
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.resto-item {
+  margin-bottom: 80px;
+  position: relative;
+  z-index: 1;
+}
+@media screen and (min-width: 768px) {
+  .resto-item {
+    margin-bottom: 40px;
+    height: 650px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .resto-item:nth-child(2n+1) {
+    margin-bottom: 5Opx;
+  }
+}
+@media screen and (min-width: 768px) {
+  .resto-item:nth-child(2n+1) .resto-item__img-wrapper {
+    float: right;
+  }
+}
+@media screen and (min-width: 768px) {
+  .resto-item:nth-child(2n+1) .resto-item__infos {
+    position: absolute;
+    height: 500px;
+    top: 200px;
+    left: 0;
+  }
+}
+.resto-item__img-wrapper {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+@media screen and (min-width: 768px) {
+  .resto-item__img-wrapper {
+    width: 60%;
+  }
+}
+.resto-item__img-wrapper .wp-post-image {
+  height: auto;
+  width: 100%;
+}
+.resto-item__infos {
+  padding: 32px;
+  background-color: white;
+  z-index: 10000;
+}
+@media screen and (min-width: 768px) {
+  .resto-item__infos {
+    position: absolute;
+    right: 0;
+    top: 200px;
+    width: 60%;
+    z-index: 2;
+    padding: 50px;
+    margin-top: 40px;
+  }
+}
+.resto-item__infos-subtitle {
+  font-weight: 300;
+  font-size: 2rem;
+}
+.resto-item__infos-title {
+  font-size: 3rem;
+}
+.resto-item__infos-desc {
+  margin-bottom: 20px;
 }
 
 .testimonials {
