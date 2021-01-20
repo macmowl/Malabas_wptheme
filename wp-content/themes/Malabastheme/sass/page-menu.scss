@@ -1,0 +1,132 @@
+@import "reset";
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
+* {
+  padding: 0 0 0 0;
+  margin: 0 0 0 0;
+  box-sizing: border-box;
+}
+// .pageEntiere {
+//   width: 100vw;
+//   max-width: 100%;
+// }
+.sectionHero {
+  height: 60rem;
+  position: relative;
+  overflow: hidden;
+}
+.HeroImage {
+  width: 100%;
+  z-index: -5;
+  position: absolute;
+  filter: brightness(50%);
+}
+.boxTitleHero {
+  position: absolute;
+  padding-left: 10rem;
+  padding-top: 10rem;
+  padding-bottom: 13rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.boxTitleHero *{
+  color: white;
+}
+.HeroTitle {
+  font-weight: 300;
+  font-size: 5rem;
+}
+.HeroTitle2 {
+  font-weight: 600;
+  font-size: 7rem;
+}
+.HeroTitle3 {
+  font-size: 3rem;
+  font-weight: 200;
+}
+.TheMenu {
+  font-weight: 600;
+}
+.sectionTitle {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5rem;
+  margin-bottom: 10rem;
+}
+.welcome {
+  font-weight: 400;
+}
+.boxSectionMenu{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.section1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10rem;
+  width: 50%;
+}
+.starterBox, .mainBox, .dessertBox {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 2rem;
+  padding: 1rem 1rem;
+}
+.boxNameAndPrice {
+  display: flex;
+  width: 100%;
+
+}
+.Name {
+  font-weight: 300;
+  text-transform: uppercase;
+}
+.boxNameAndPrice > * {
+  margin: 0;
+}
+
+.Dot {
+  border-bottom: 1px black dotted;
+  flex:1;
+}
+
+.titleStarter {
+  margin: 2rem auto 5rem auto;
+  width: fit-content;
+  border-bottom: 1px solid black;
+}
+.Description {
+  width: 80%;
+  font-weight: 200;
+  color: gray;
+  margin: 0.5rem 0;
+}
+.selection {
+  border: 2px solid #E1C303 ;
+  position: relative
+}
+.selection::before {
+  content: "Chief Selection";
+  position: absolute;
+  top: -2rem;
+  left: -2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  background-color: #E1C303 ;
+  color: white;
+  font-family: "Poppins";
+  font-weight: 600;
+  width: 10rem;
+  height: 2rem;
+}
