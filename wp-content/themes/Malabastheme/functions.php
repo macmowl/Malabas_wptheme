@@ -92,7 +92,13 @@ function malabas_register_assets() {
         array(), 
         '1.0'
     );
-    
+
+    wp_enqueue_style( 
+        'malabas page-menu', 
+        get_template_directory_uri() . '/css/page-menu.css',
+        array(), 
+        '1.0'
+    );
     
      wp_enqueue_script( 'gmap',
       "https://maps.googleapis.com/maps/api/js?key=" . MALABAS_GMAP_API_KEY, 
