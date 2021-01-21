@@ -1,6 +1,6 @@
 @import 'reset';
 
-.hero {
+.herofp {
     width: 100%;
     height: 92vh;
     text-align: left;
@@ -20,6 +20,7 @@
         grid-template-columns: 1fr 1200px 1fr;
         grid-template-areas: ". main .";
         justify-content: center;
+        padding-top: 170px;
     }
 
     &__wrapper {

@@ -7,7 +7,7 @@
   color: #292929;
 }
 
-p, a {
+p, a, input, ul, li, label {
   font-size: 1.6rem;
   line-height: 2.8rem;
 }
@@ -54,7 +54,7 @@ body {
   clear: both;
 }
 
-.hero {
+.herofp {
   width: 100%;
   height: 92vh;
   text-align: left;
@@ -66,48 +66,49 @@ body {
   margin-top: -70px;
 }
 @media screen and (min-width: 768px) {
-  .hero {
+  .herofp {
     padding: 10rem 8rem 0 8rem;
   }
 }
 @media screen and (min-width: 1200px) {
-  .hero {
+  .herofp {
     display: grid;
     grid-template-columns: 1fr 1200px 1fr;
     grid-template-areas: ". main .";
     justify-content: center;
+    padding-top: 170px;
   }
 }
 @media screen and (min-width: 1200px) {
-  .hero__wrapper {
+  .herofp__wrapper {
     grid-area: main;
     justify-content: center;
   }
 }
-.hero__wrapper__subtitle {
+.herofp__wrapper__subtitle {
   color: #FFF;
   font-weight: 200;
   margin-bottom: 1.3rem;
 }
 @media screen and (min-width: 1200px) {
-  .hero__wrapper__subtitle {
+  .herofp__wrapper__subtitle {
     font-size: 5rem;
     line-height: 6rem;
   }
 }
-.hero__wrapper__title {
+.herofp__wrapper__title {
   color: #FFF;
   font-size: 4rem;
   font-weight: 600;
   margin-bottom: 2rem;
 }
 @media screen and (min-width: 1200px) {
-  .hero__wrapper__title {
+  .herofp__wrapper__title {
     font-size: 8rem;
     line-height: 9rem;
   }
 }
-.hero__wrapper__separator {
+.herofp__wrapper__separator {
   width: 40px;
   height: 1px;
   border-bottom: 1px solid #FFF;
@@ -115,11 +116,11 @@ body {
   margin-right: 10px;
   margin-top: 12px;
 }
-.hero__wrapper__link {
+.herofp__wrapper__link {
   font-size: 1.3rem;
 }
 @media screen and (min-width: 1200px) {
-  .hero__wrapper__link {
+  .herofp__wrapper__link {
     font-size: 1.6rem;
   }
 }
