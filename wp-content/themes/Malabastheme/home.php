@@ -13,7 +13,7 @@
     <div class="herocontent">
         <h2 class="herocontent__subtitle">The Chef's selection</h2>
         <h1 class="herocontent__title">RECIPES BLOG</h1>
-        <img src="<?= get_template_directory_uri(); ?>/assets/svg/dash.svg" alt=""> <a href="#" class="herocontent__link">Check our menu</a>
+        <img src="<?= get_template_directory_uri(); ?>/assets/svg/dash.svg" alt=""> <a href="<?= get_page_link( get_option( 'menu' ) ); ?>" class="herocontent__link">Check our menu</a>
     </div>
 </section>
 
