@@ -17,34 +17,36 @@
     </div>
 </section>
 
-<section class="recipes-list">
-    <div class="recipes-list__tag">
-        <?php
-            $tags = get_tags();
-            if ( $tags ) :
-                foreach ( $tags as $tag ) : ?>
-                    <img src="<?= get_template_directory_uri(); ?>/assets/svg/cutelry.svg" alt=""><span><?php echo esc_html( $tag->name ); ?></span>
-                <?php endforeach; endif; ?>
-        </div>
-    <?php if( have_posts() ) : while( have_posts() ) : the_post(); ?>
-    <div class="recipe-item">
-        <div class="recipe-item__thumbnail-wrapper">
-            <?php the_post_thumbnail('post-thumbnail'); ?>
-        </div>
-        <div class="recipe-item__infos">
-            <div class="recipe-item__infos-tag">
-                <?php the_tags('<img src="' . get_template_directory_uri() . '/assets/svg/cutelry.svg" alt=""> ', '', ''); ?>
+<section class="recipes-container">
+    <div class="recipes-list">
+        <div class="recipes-list__tag">
+            <?php
+                $tags = get_tags();
+                if ( $tags ) :
+                    foreach ( $tags as $tag ) : ?>
+                        <img src="<?= get_template_directory_uri(); ?>/assets/svg/cutelry.svg" alt=""><span><?php echo esc_html( $tag->name ); ?></span>
+                    <?php endforeach; endif; ?>
             </div>
-                
-            <p class="recipe-item__infos-date"><?php the_date(); ?></p>
-            <h3><?php the_title(); ?></h3>
-            <p><?php the_content(); ?></p>
-            <a href="<?php the_permalink(); ?>" class="recipe-item__infos-link btn">More infos</a>
+        <?php if( have_posts() ) : while( have_posts() ) : the_post(); ?>
+        <div class="recipe-item">
+            
+            <?php the_post_thumbnail('post_recipe'); ?>
+            <div class="recipe-item__infos">
+                <div class="recipe-item__infos-tag">
+                    <?php the_tags('<img src="' . get_template_directory_uri() . '/assets/svg/cutelry.svg" alt=""> ', '', ''); ?>
+                </div>
+                    
+                <p class="recipe-item__infos-date"><?php the_date(); ?></p>
+                <h3><?php the_title(); ?></h3>
+                <p><?php the_content(); ?></p>
+                <a href="<?php the_permalink(); ?>" class="recipe-item__infos-link btn">More infos</a>
+            </div>
         </div>
+        <?php endwhile; endif; ?>
+        <?php posts_nav_link(); ?>
     </div>
-    <?php endwhile; endif; ?>
-    <?php posts_nav_link(); ?>
 </section>
+
 
 <?php get_template_part( 'parts/discover-menu' ); ?>
 

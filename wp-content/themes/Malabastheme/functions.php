@@ -186,6 +186,7 @@ add_action( 'admin_menu', 'malabas_remove_menu_pages' );
 // Add image size
 add_image_size( 'square_menu', 256, 256, true);
 add_image_size( 'restaurant_mobile_header', 800, 717, true);
+add_image_size( 'post_recipe', 750, 490, true);
 
 // Disable Gutenberg editor
 add_filter("use_block_editor_for_post_type", "disable_gutenberg_editor");
