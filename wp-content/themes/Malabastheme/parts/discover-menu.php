@@ -37,6 +37,6 @@
                 <h2 class="menufront__infos__desktop-title"><?php the_field( 'menu_title', 2 ); ?></h2>
             </div>
             <p class="menufront__infos-description"><?php the_field( 'menu_description', 2 ); ?></p>
-            <a href="<?php the_field( 'menu_link' ); ?>" class="btn"><?php the_field( 'menu_link-label', 2 ); ?></a>
+            <a href="<?= get_page_link( get_option( 'menu' ) ); ?>/menu" class="btn"><?php the_field( 'menu_link-label', 2 ); ?></a>
         </div>
     </section>
