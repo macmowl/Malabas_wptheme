@@ -47,7 +47,7 @@ function malabas_register_assets() {
         '1.0', 
         true
     );
-    
+
     // Déclarer style.css à la racine du thème
     wp_enqueue_style( 
         'malabas',
@@ -243,10 +243,6 @@ register_sidebar( array(
      array(
         'id' => 'social-sidebar',
         'name' => 'social_sidebar',
-        'before_widget'  => '<div class="site__social__sidebar %2$s">',
-        'after_widget'  => '</div>',
-        'before_title' => '<p class="site__social__sidebar__title">',
-        'after_title' => '</p>',
      ));
 }
 
@@ -260,3 +256,5 @@ function get_excerpt( $count ) {
     $excerpt = '<p>'.$excerpt.'... </p><div class="lastrecipe__infos-link"><div class="lastrecipe__infos-dash"></div><a class="lastrecipe__infos-readmore" href="'.$permalink.'">Read More</a></div>';
     return $excerpt;
 }
+
+
