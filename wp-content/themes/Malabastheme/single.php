@@ -14,10 +14,12 @@
             </div>
 
 
-            <h1 class="single__Title"><?php the_field("title"); ?></h1>
+            <h1 class="single__Title"><?php the_title(); ?></h1>
             
-            <p class="single__Title--paragraphe"><?php the_field("text"); ?></p>
-            <img class="single__Title--image" src="<?php echo get_field("image")["url"]; ?>" alt="">
+            <div class="single__Title--paragraphe"><?php the_content(); ?></div>
+            <div class="single__Title--image">
+                <?php the_post_thumbnail( 'recipe_img_principale' ); ?>
+            </div>
             
         
         </section>
@@ -55,12 +57,13 @@
                                     <div class="instru"><?= get_sub_field( 'instruction', false ); ?></div>
                                         
                                             <?php
-                                                $image = get_sub_field('img');
+                                                $image = get_sub_field('imageinstruction');
+                                                $url = wp_get_attachment_image_src( $image, 'recipe_img_instruction' );
                                                 if( $image ) {
                                                     ?>
-                                                        <!-- <div class="boxImgInstruction"> -->
-                                                            <img class="imgInstruction" src=<?= $image; ?>>
-                                                        <!-- </div> -->
+                                                        <div class="boxImgInstruction">
+                                                            <img class="imgInstruction" src="<?php echo $url[0]; ?>">
+                                                        </div>
                                                     <?php
                                                 }
                                             ?>
@@ -78,7 +81,7 @@
 
     </section>
 
-
+    <?php get_template_part( 'parts/latest-recipes' ); ?>
 
 
 

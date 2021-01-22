@@ -80,6 +80,7 @@
             <?php endif; ?>
         </div> 
     </div>
-
+    
+    <?php get_template_part( 'parts/latest-recipes' ); ?>
 
 <?php get_footer(); ?>

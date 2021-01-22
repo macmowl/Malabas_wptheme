@@ -16,35 +16,53 @@
   overflow: hidden;
 }
 .HeroImage {
-  width: 100%;
+  height: 100%;
   z-index: -5;
   position: absolute;
+  left: -20%;
   filter: brightness(50%);
+  @include medium {
+    left: 0;
+    width: 100%;
+    height: auto;
+  }
 }
 .boxTitleHero {
   position: absolute;
-  padding-left: 10rem;
+  padding-left: 4rem;
   padding-top: 10rem;
   padding-bottom: 13rem;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  @include medium {
+    padding-left: 10rem;
+  }
 }
 .boxTitleHero *{
   color: white;
 }
 .HeroTitle {
   font-weight: 300;
-  font-size: 5rem;
+  font-size: 3rem;
+  @include medium {
+    font-size: 5rem;
+  }
 }
 .HeroTitle2 {
   font-weight: 600;
-  font-size: 7rem;
+  font-size: 4.5rem;
+  @include medium {
+    font-size: 7rem;
+  }
 }
 .HeroTitle3 {
   font-size: 3rem;
   font-weight: 200;
+  @include medium {
+    font-size: 4.5rem;
+  }
 }
 .TheMenu {
   font-weight: 600;
@@ -71,7 +89,10 @@
   flex-direction: column;
   align-items: center;
   margin-bottom: 10rem;
-  width: 50%;
+  width: 90%;
+  @include medium {
+    width: 50%;
+  }
 }
 .starterBox, .mainBox, .dessertBox {
   display: flex;
@@ -97,6 +118,7 @@
 .Dot {
   border-bottom: 1px black dotted;
   flex:1;
+  margin-bottom: 8px;
 }
 
 .titleStarter {
@@ -129,4 +151,7 @@
   font-weight: 600;
   width: 10rem;
   height: 2rem;
+}
+.latestrecipes, .newsletter {
+  background-color: rgb(238, 238, 238);
 }

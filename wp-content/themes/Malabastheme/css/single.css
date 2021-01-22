@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
 * {
@@ -9,9 +9,9 @@
   color: #292929;
 }
 
-p, a {
+p, a, input, ul, li, label {
   font-size: 1.6rem;
-  margin-bottom: 1.6rem;
+  line-height: 2.8rem;
 }
 
 a {
@@ -21,26 +21,39 @@ a {
 
 h1 {
   font-size: 3.2rem;
-  margin-bottom: 3.2rem;
+  line-height: 4.6rem;
 }
 
 h2 {
   font-size: 2.8rem;
-  margin-bottom: 2.8rem;
+  line-height: 4rem;
 }
 
 h3 {
   font-size: 2.4rem;
-  margin-bottom: 2.4rem;
+  line-height: 3.2rem;
 }
 
 h4 {
   font-size: 2rem;
-  margin-bottom: 2rem;
+  line-height: 2.8rem;
 }
 
 body {
   line-height: 1;
+}
+
+.btn {
+  border: 0;
+  background-color: #292929;
+  color: #FFF;
+  padding: 15px 20px;
+  font-size: 1.6rem;
+  display: inline-block;
+}
+
+.clear {
+  clear: both;
 }
 
 * {
@@ -78,13 +91,14 @@ body {
   font-weight: 500;
 }
 
-.single__Title--paragraphe {
+.single__Title--paragraphe p {
   color: #FFF;
   margin-bottom: 5rem;
   padding: 0 2rem;
 }
 
-.single__Title--image {
+.attachment-recipe_img_principale {
+  object-fit: cover;
   width: 100%;
   -webkit-box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
@@ -145,6 +159,10 @@ body {
   padding-left: 5rem;
 }
 
+.ingredient__Text ul li {
+  margin-bottom: 0;
+}
+
 .box__Ingredient {
   margin-bottom: 3rem;
   position: relative;
@@ -153,6 +171,10 @@ body {
 .instructionEtImg {
   display: flex;
   margin-bottom: 5rem;
+  width: 100%;
+}
+
+.imgInstruction {
   width: 100%;
 }
 
@@ -206,7 +228,7 @@ body {
 
 .nbrPersons {
   font-weight: 500;
-  margin-bottom: 5rem;
+  margin-bottom: 2.5rem;
 }
 
 .boxImgSocialMedia {

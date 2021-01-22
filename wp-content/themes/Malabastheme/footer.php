@@ -53,7 +53,7 @@
 
 <div class="site__footer__part__two">
     <div class="site__footer__part__two__line">
-        <p>Tous droits réservés à la Malabas Team<p>
+        <p>Tous droits réservés à la Malabas Team</p>
     </div>     
 </div>
 <?php wp_footer(); ?>
