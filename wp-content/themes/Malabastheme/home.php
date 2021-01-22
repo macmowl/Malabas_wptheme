@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<section class="sectionHero">
+<section class="sectionHerohome">
     
     <?php
         $post_id = 15; 

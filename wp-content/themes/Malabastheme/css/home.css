@@ -54,20 +54,20 @@ body {
   clear: both;
 }
 
-.sectionHero {
+.sectionHerohome {
   height: 40vh;
   position: relative;
   overflow: hidden;
 }
 @media screen and (min-width: 992px) {
-  .sectionHero {
+  .sectionHerohome {
     display: grid;
     grid-template-columns: 1fr 992px 1fr;
     grid-template-areas: " . main . ";
   }
 }
 @media screen and (min-width: 1200px) {
-  .sectionHero {
+  .sectionHerohome {
     display: grid;
     grid-template-columns: 1fr 1200px 1fr;
     grid-template-areas: " . main . ";
