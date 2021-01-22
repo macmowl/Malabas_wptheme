@@ -48,6 +48,7 @@
 .HeroTitle {
   font-weight: 300;
   font-size: 3rem;
+  margin-bottom: 4rem;
   @include medium {
     font-size: 5rem;
   }
@@ -156,4 +157,11 @@
 }
 .latestrecipes, .newsletter {
   background-color: rgb(238, 238, 238);
+}
+.MenuHachureBlancheHero {
+  width: 100%;
+  transform: rotate(180deg);
+  height: 5rem;
+  position: relative;
+  bottom: 5rem;
 }

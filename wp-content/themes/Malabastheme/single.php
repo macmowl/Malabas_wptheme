@@ -1,9 +1,9 @@
-<?php get_header(); ?>
-<section class="recipe_Principal">
-    <section class="recipe__SectionGray">
-        
-        <section class="boxGrayMiddle">
 
+
+    <section class="recipe__SectionGray">
+    <?php get_header(); ?>
+        <section class="boxGrayMiddle">
+        
             <div class="menu__recipe">
                 <div class="menu__recipe--left">
                     <a class="menu__recipe--left-btn" href="<?php echo home_url( '/' ); ?>">Return</a>
@@ -22,7 +22,7 @@
             
         
         </section>
-
+    <img class="SingleHachureBlancheHero" src="<?= get_template_directory_uri(); ?>/assets/images/hachures-blanches.png" alt="">
     </section>
 
     <section class="recipe__SectionIngredient">
@@ -81,5 +81,5 @@
     </section>
 
     <?php get_template_part( 'parts/latest-recipes' ); ?>
-</section>
+
 <?php get_footer(); ?>
