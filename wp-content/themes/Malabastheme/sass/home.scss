@@ -1,9 +1,11 @@
 @import 'reset';
 
 .sectionHerohome {
-    height: 40vh;
+    height: 50vh;
     position: relative;
     overflow: hidden;
+    margin-top: -60px;
+    z-index: -1;
 
     @include large {
         display: grid;
@@ -16,15 +18,18 @@
         grid-template-columns: 1fr 1200px 1fr;
         grid-template-areas: " . main . ";
     }
-  }
-  .HeroImage {
-    width: 100%;
-    z-index: -5;
-    position: absolute;
-    filter: brightness(50%);
-  }
+
+    .HeroImage {
+        width: 100%;
+        z-index: -5;
+        position: absolute;
+        filter: brightness(50%);
+    }
+}
+
+  
   .herocontent {
-    margin: 8rem 3.2rem;
+    margin: 9rem 3.2rem;
     & * {
         color: white;
     }

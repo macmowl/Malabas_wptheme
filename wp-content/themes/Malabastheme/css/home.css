@@ -55,9 +55,11 @@ body {
 }
 
 .sectionHerohome {
-  height: 40vh;
+  height: 50vh;
   position: relative;
   overflow: hidden;
+  margin-top: -60px;
+  z-index: -1;
 }
 @media screen and (min-width: 992px) {
   .sectionHerohome {
@@ -73,8 +75,7 @@ body {
     grid-template-areas: " . main . ";
   }
 }
-
-.HeroImage {
+.sectionHerohome .HeroImage {
   width: 100%;
   z-index: -5;
   position: absolute;
@@ -82,7 +83,7 @@ body {
 }
 
 .herocontent {
-  margin: 8rem 3.2rem;
+  margin: 9rem 3.2rem;
 }
 .herocontent * {
   color: white;

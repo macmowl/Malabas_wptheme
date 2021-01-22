@@ -66,6 +66,8 @@ body {
   height: 60rem;
   position: relative;
   overflow: hidden;
+  margin-top: -60px;
+  z-index: -1;
 }
 
 .HeroImage {

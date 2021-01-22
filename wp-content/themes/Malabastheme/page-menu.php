@@ -1,6 +1,6 @@
 
+    <?php get_header(); ?>
     <section class="sectionHero">
-        <?php get_header(); ?>
         <img  class="HeroImage" src="<?= get_field( 'heroimage' ); ?>" alt="">
         
         <div class="boxTitleHero">

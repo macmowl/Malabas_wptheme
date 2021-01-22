@@ -1,8 +1,7 @@
+<?php get_header(); ?>
 <section class="recipe_Principal">
-
-
     <section class="recipe__SectionGray">
-        <?php get_header(); ?>
+        
         <section class="boxGrayMiddle">
 
             <div class="menu__recipe">
@@ -82,8 +81,5 @@
     </section>
 
     <?php get_template_part( 'parts/latest-recipes' ); ?>
-
-
-
-<?php get_footer(); ?>
 </section>
+<?php get_footer(); ?>
