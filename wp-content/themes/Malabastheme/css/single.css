@@ -64,6 +64,7 @@ body {
 
 .recipe_Principal {
   width: 100vw;
+  max-width: 100%;
 }
 
 .recipe__SectionGray {
@@ -100,6 +101,8 @@ body {
 .attachment-recipe_img_principale {
   object-fit: cover;
   width: 100%;
+  position: relative;
+  z-index: 10;
   -webkit-box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
@@ -253,4 +256,10 @@ body {
   width: 4rem;
   margin-bottom: 1rem;
   margin-right: 1rem;
+}
+
+.SingleHachureBlancheHero {
+  width: 100%;
+  transform: rotate(180deg);
+  height: 5rem;
 }

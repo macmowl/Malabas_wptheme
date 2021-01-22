@@ -1,7 +1,8 @@
-<?php get_header(); ?>
+
 <section class="recipe_Principal">
+
     <section class="recipe__SectionGray">
-        
+    <?php get_header(); ?>
         <section class="boxGrayMiddle">
 
             <div class="menu__recipe">
@@ -22,7 +23,7 @@
             
         
         </section>
-
+    <img class="SingleHachureBlancheHero" src="<?= get_template_directory_uri(); ?>/assets/images/hachures-blanches.png" alt="">
     </section>
 
     <section class="recipe__SectionIngredient">
