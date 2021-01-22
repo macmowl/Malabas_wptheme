@@ -10,7 +10,7 @@
             <H2 class="hero__wrapper__subtitle"><?php the_field( 'hero-subtitle' ); ?></h2>    
             <h1 class="hero__wrapper__title firstWordTitle"><?php the_field( 'hero-title' ); ?></h1>
             <div class="hero__wrapper__separator"></div>
-            <a  class="hero__wrapper__link"href="<?php the_field( 'hero-link' ); ?>"><?php the_field( 'hero-label_link' ); ?></a>
+            <a  class="hero__wrapper__link" href="<?= get_page_link( get_option( 'menu' ) ); ?>/menu"><?php the_field( 'hero-label_link' ); ?></a>
         </div>
     </section>
     <?php

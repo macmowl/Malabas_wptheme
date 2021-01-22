@@ -30,19 +30,20 @@
   padding: 0 2rem;
   font-weight: 500;
 }
-.single__Title--paragraphe {
+.single__Title--paragraphe p{
   color: $white;
   margin-bottom: 5rem;
   padding: 0 2rem;
 }
-.single__Title--image {
+.attachment-recipe_img_principale {
+  object-fit: cover;
   width: 100%;
   -webkit-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
   -moz-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
   box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
 
-
 }
+
 .menu__recipe {
   width: 100%;
   display: flex;
@@ -89,6 +90,9 @@
   padding-bottom: 1rem;
   padding-left: 5rem;
 }
+.ingredient__Text ul li {
+  margin-bottom: 0;
+}
 .box__Ingredient {
   margin-bottom: 3rem;
   position: relative;
@@ -96,6 +100,9 @@
 .instructionEtImg {
   display: flex;
   margin-bottom: 5rem;
+  width: 100%;
+}
+.imgInstruction {
   width: 100%;
 }
 .instructionNumber {
@@ -140,7 +147,7 @@
 }
 .nbrPersons {
   font-weight: 500;
-  margin-bottom: 5rem;
+  margin-bottom: 2.5rem;
 }
 .boxImgSocialMedia {
   display: flex;
@@ -161,3 +168,4 @@
   margin-bottom: 1rem;
   margin-right: 1rem;
 }
+

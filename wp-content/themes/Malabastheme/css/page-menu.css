@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
 * {
@@ -9,9 +9,9 @@
   color: #292929;
 }
 
-p, a {
+p, a, input, ul, li, label {
   font-size: 1.6rem;
-  margin-bottom: 1.6rem;
+  line-height: 2.8rem;
 }
 
 a {
@@ -21,26 +21,39 @@ a {
 
 h1 {
   font-size: 3.2rem;
-  margin-bottom: 3.2rem;
+  line-height: 4.6rem;
 }
 
 h2 {
   font-size: 2.8rem;
-  margin-bottom: 2.8rem;
+  line-height: 4rem;
 }
 
 h3 {
   font-size: 2.4rem;
-  margin-bottom: 2.4rem;
+  line-height: 3.2rem;
 }
 
 h4 {
   font-size: 2rem;
-  margin-bottom: 2rem;
+  line-height: 2.8rem;
 }
 
 body {
   line-height: 1;
+}
+
+.btn {
+  border: 0;
+  background-color: #292929;
+  color: #FFF;
+  padding: 15px 20px;
+  font-size: 1.6rem;
+  display: inline-block;
+}
+
+.clear {
+  clear: both;
 }
 
 * {
@@ -56,21 +69,34 @@ body {
 }
 
 .HeroImage {
-  width: 100%;
+  height: 100%;
   z-index: -5;
   position: absolute;
+  left: -20%;
   filter: brightness(50%);
+}
+@media screen and (min-width: 768px) {
+  .HeroImage {
+    left: 0;
+    width: 100%;
+    height: auto;
+  }
 }
 
 .boxTitleHero {
   position: absolute;
-  padding-left: 10rem;
+  padding-left: 4rem;
   padding-top: 10rem;
   padding-bottom: 13rem;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+@media screen and (min-width: 768px) {
+  .boxTitleHero {
+    padding-left: 10rem;
+  }
 }
 
 .boxTitleHero * {
@@ -79,17 +105,32 @@ body {
 
 .HeroTitle {
   font-weight: 300;
-  font-size: 5rem;
+  font-size: 3rem;
+}
+@media screen and (min-width: 768px) {
+  .HeroTitle {
+    font-size: 5rem;
+  }
 }
 
 .HeroTitle2 {
   font-weight: 600;
-  font-size: 7rem;
+  font-size: 4.5rem;
+}
+@media screen and (min-width: 768px) {
+  .HeroTitle2 {
+    font-size: 7rem;
+  }
 }
 
 .HeroTitle3 {
   font-size: 3rem;
   font-weight: 200;
+}
+@media screen and (min-width: 768px) {
+  .HeroTitle3 {
+    font-size: 4.5rem;
+  }
 }
 
 .TheMenu {
@@ -120,7 +161,12 @@ body {
   flex-direction: column;
   align-items: center;
   margin-bottom: 10rem;
-  width: 50%;
+  width: 90%;
+}
+@media screen and (min-width: 768px) {
+  .section1 {
+    width: 50%;
+  }
 }
 
 .starterBox, .mainBox, .dessertBox {
@@ -149,6 +195,7 @@ body {
 .Dot {
   border-bottom: 1px black dotted;
   flex: 1;
+  margin-bottom: 8px;
 }
 
 .titleStarter {
@@ -184,4 +231,8 @@ body {
   font-weight: 600;
   width: 10rem;
   height: 2rem;
+}
+
+.latestrecipes, .newsletter {
+  background-color: #eeeeee;
 }

@@ -99,6 +99,13 @@ function malabas_register_assets() {
         array(), 
         '1.0'
     );
+
+    wp_enqueue_style( 
+        'malabas home', 
+        get_template_directory_uri() . '/css/home.css',
+        array(), 
+        '1.0'
+    );
     
      wp_enqueue_script( 'gmap',
       "https://maps.googleapis.com/maps/api/js?key=" . MALABAS_GMAP_API_KEY, 
@@ -135,7 +142,7 @@ function malabas_register_post_types() {
         'has_archive'   => true,
         'supports'      => array( 'title', 'editor', 'thumbnail' ),
         'menu_position' => 5,
-        'menu_icon'     => 'dashicons-admin-home',
+        'menu_icon'     => 'dashicons-admin-multisite',
     );
 
     register_post_type( 'restaurants', $args );
@@ -149,12 +156,13 @@ register_nav_menus( array(
 	'footer' => 'Bas de page',
 ));
 
-// Change dashboard Articles to Recipes
+// Change dashboard Posts to Recipes
 function malabas_change_post_object() {
     $get_post_type = get_post_type_object('post'); 
     $labels = $get_post_type->labels;
         $labels->name = 'Recipes';
         $labels->singular_name = 'Recipe';
+        $labels->menu_icon = 'dashicons-carrot';
         $labels->add_new = 'Add recipe';
         $labels->add_new_item = 'Add recipe';
         $labels->edit_item = 'Edit recipe';
@@ -165,20 +173,36 @@ function malabas_change_post_object() {
         $labels->not_found_in_trash = 'No recipe found in Trash';
         $labels->all_items = 'All Recipes';
         $labels->menu_name = 'Recipes';
-        $labels->menu_icon = 'dashicons-carrot';
+        
         $labels->name_admin_bar = 'Recipes';
 }
 add_action( 'init', 'malabas_change_post_object' );
 
 //Delete comments menu
-function malabas_remove_menu_pages() {
+function malabas_custom_menu_pages() {
     remove_menu_page( 'edit-comments.php' );
+    add_menu_page('menu', 'The Menu', 'edit_posts', 'post.php?post=253&action=edit', '', 'dashicons-book-alt', 4);
+    add_menu_page('homepage', 'Home page', 'edit_posts', 'post.php?post=2&action=edit', '', 'dashicons-admin-home', 4);
+    if (!(current_user_can('administrator'))) {
+        remove_menu_page('themes.php');
+        remove_menu_page('wpcf7');
+        remove_menu_page('acf-field-group');
+        remove_menu_page('plugins.php');
+        remove_menu_page('edit.php?post_type=acf-field-group');
+        remove_menu_page('edit.php?post_type=page');
+        remove_submenu_page('index.php', 'update-core.php');
+        remove_menu_page('tools.php');
+        remove_menu_page('edit.php?post_type=theme-general-settings.php');
+    }
 }
-add_action( 'admin_menu', 'malabas_remove_menu_pages' );
+add_action( 'admin_menu', 'malabas_custom_menu_pages' );
 
 // Add image size
 add_image_size( 'square_menu', 256, 256, true);
 add_image_size( 'restaurant_mobile_header', 800, 717, true);
+add_image_size( 'post_recipe', 750, 490, true);
+add_image_size( 'recipe_img_principale', 800, 300, true);
+add_image_size( 'recipe_img_instruction', 610, 220, true);
 
 // Disable Gutenberg editor
 add_filter("use_block_editor_for_post_type", "disable_gutenberg_editor");
