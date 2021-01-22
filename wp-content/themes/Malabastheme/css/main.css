@@ -83,6 +83,7 @@ body {
 @media screen and (min-width: 1200px) {
   .site-header {
     max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
     padding: 15px 0;
   }
