@@ -2,7 +2,7 @@
     <?php get_header(); ?>
     <section class="sectionHero">
         <img  class="HeroImage" src="<?= get_field( 'heroimage' ); ?>" alt="">
-        
+       
         <div class="boxTitleHero">
             <div>
                 <h2 class="HeroTitle"><?= get_field( 'herotitle' ); ?></h2>
@@ -10,8 +10,9 @@
                 </div>
             <h2 class="HeroTitle3">&horbar;&horbar; Order online</h2>
         </div>
+        
     </section>
-
+    <img class="MenuHachureBlancheHero" src="<?= get_template_directory_uri(); ?>/assets/images/hachures-blanches.png" alt="">
 
     <section class="sectionTitle">
         <h2 class="welcome">Welcome</h2>
