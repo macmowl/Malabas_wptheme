@@ -120,7 +120,6 @@ body {
 @media screen and (min-width: 1200px) {
   .site-header__dropdown {
     display: block;
-    width: auto;
     position: relative;
     background: none;
     top: 0;

@@ -1,10 +1,9 @@
 
-<section class="recipe_Principal">
 
     <section class="recipe__SectionGray">
     <?php get_header(); ?>
         <section class="boxGrayMiddle">
-
+        
             <div class="menu__recipe">
                 <div class="menu__recipe--left">
                     <a class="menu__recipe--left-btn" href="<?php echo home_url( '/' ); ?>">Return</a>
@@ -82,5 +81,5 @@
     </section>
 
     <?php get_template_part( 'parts/latest-recipes' ); ?>
-</section>
+
 <?php get_footer(); ?>

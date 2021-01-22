@@ -65,6 +65,7 @@ body {
 .recipe_Principal {
   width: 100vw;
   max-width: 100%;
+  margin-top: -60px;
 }
 
 .recipe__SectionGray {
