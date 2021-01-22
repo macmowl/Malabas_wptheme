@@ -86,6 +86,7 @@
         </div>
 
         <?php endif; ?>
+        
         <div class="part_book">
             <div class="book">
                 <div class="book__intro">
@@ -95,7 +96,12 @@
                 <?php $image_register = get_field("image_register"); ?> 
                 <img class="image_register" src="<?php echo $image_register["url"] ; ?>" alt="menu">
                 <div class="reserve">
-                    <form>
+                <aside class="site__sidebar">
+                    
+                        <?php dynamic_sidebar( 'social-sidebar' ); ?>
+                    
+                </aside>
+                    <!-- <form>
                         <div class="reserve__line__1">
                             <div>
                                 <label for="name">Nom</label>
@@ -150,7 +156,7 @@
                         <div class="submit">
                             <input class="submit__btn"type="submit" value="Réserver">
                         </div>
-                    </form>
+                    </form> -->
                 </div>            
             </div>
         </div>
