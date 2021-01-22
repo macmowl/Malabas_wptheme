@@ -64,6 +64,7 @@ body {
 
 .recipe_Principal {
   width: 100vw;
+  margin-top: -60px;
 }
 
 .recipe__SectionGray {
