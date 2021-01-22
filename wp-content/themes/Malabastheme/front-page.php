@@ -5,12 +5,12 @@
         $image_id = get_field( 'hero-image' );
         if( $image_id ) {
     ?>
-    <section class="hero" style="background-image: url('<?= $image_id['url']?>'); z-index: 0;">
-        <div class="hero__wrapper">
-            <H2 class="hero__wrapper__subtitle"><?php the_field( 'hero-subtitle' ); ?></h2>    
-            <h1 class="hero__wrapper__title firstWordTitle"><?php the_field( 'hero-title' ); ?></h1>
-            <div class="hero__wrapper__separator"></div>
-            <a  class="hero__wrapper__link" href="<?= get_page_link( get_option( 'menu' ) ); ?>/menu"><?php the_field( 'hero-label_link' ); ?></a>
+    <section class="herofp" style="background-image: url('<?= $image_id['url']?>'); z-index: 0;">
+        <div class="herofp__wrapper">
+            <H2 class="herofp__wrapper__subtitle"><?php the_field( 'hero-subtitle' ); ?></h2>    
+            <h1 class="herofp__wrapper__title firstWordTitle"><?php the_field( 'hero-title' ); ?></h1>
+            <div class="herofp__wrapper__separator"></div>
+            <a  class="herofp__wrapper__link" href="<?= get_page_link( get_option( 'menu' ) ); ?>/menu"><?php the_field( 'hero-label_link' ); ?></a>
         </div>
     </section>
     <?php

@@ -22,4 +22,8 @@ jQuery(document).ready(function ($) {
     fade: true,
     autoplay: false
   });
+}); // Display dropdown menu header
+
+$('.site-header__menu-btn').click(function () {
+  $('.site-header__dropdown').css('display') == 'none' ? $('.site-header__dropdown').css('display', 'block') : $('.site-header__dropdown').css('display', 'none');
 });

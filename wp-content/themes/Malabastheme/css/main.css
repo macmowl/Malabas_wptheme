@@ -73,43 +73,105 @@ body {
   z-index: 999;
 }
 
-.site__header {
+.site-header {
   display: flex;
   justify-content: space-between;
-  background-color: #1a1a1a;
+  padding: 15px 32px;
+  height: 60px;
+  position: relative;
 }
-.site__header__logo {
-  margin-top: 2rem;
+@media screen and (min-width: 1200px) {
+  .site-header {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 0;
+  }
+}
+.site-header__logo {
   color: white;
   text-decoration: none;
+  font-weight: bold;
+  margin-bottom: 0;
 }
-.site__header__menu {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-  display: flex;
-  flex-direction: row;
+.site-header__menu-btn {
+  cursor: pointer;
 }
-.site__header__menu li {
-  border: 1px solid #1a1a1a;
+.site-header__menu-btn p {
+  color: white;
+}
+.site-header__menu-btn p img {
+  margin-left: 10px;
+}
+@media screen and (min-width: 1200px) {
+  .site-header__menu-btn {
+    display: none;
+  }
+}
+.site-header__dropdown {
+  display: none;
+  width: 150px;
+  position: absolute;
+  background: white;
+  padding: 20px 30px;
+  top: 60px;
+  right: 32px;
+  text-align: right;
+}
+@media screen and (min-width: 1200px) {
+  .site-header__dropdown {
+    display: block;
+    width: auto;
+    position: relative;
+    background: none;
+    top: 0;
+    padding: 0;
+  }
+}
+.site-header__dropdown ul {
+  list-style-type: none;
+}
+@media screen and (min-width: 1200px) {
+  .site-header__dropdown ul {
+    display: flex;
+  }
+}
+.site-header__dropdown ul li {
   transition: all 400ms;
-  display: inline;
   margin-left: 1rem;
   margin-right: 1rem;
-  list-style-type: none;
   text-decoration: none;
 }
-.site__header__menu li:hover {
+@media screen and (min-width: 1200px) {
+  .site-header__dropdown ul li {
+    display: inline;
+    color: white;
+  }
+}
+.site-header__dropdown ul li:hover {
   background-color: white;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
   transform: scale(1.15);
 }
-.site__header__menu li:hover a {
+.site-header__dropdown ul li:hover a {
   color: #1a1a1a;
 }
-.site__header__menu li a {
-  color: #eae5e5;
+.site-header__dropdown ul li a {
+  color: #1a1a1a;
   text-decoration: none;
+}
+@media screen and (min-width: 1200px) {
+  .site-header__dropdown ul li a {
+    color: white;
+  }
+}
+.site-header__dropdown ul li a span {
+  color: #1a1a1a;
+}
+@media screen and (min-width: 1200px) {
+  .site-header__dropdown ul li a span {
+    color: white;
+  }
 }
 
 .newsletter {
