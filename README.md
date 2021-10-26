@@ -31,12 +31,12 @@ login client: Chef mdp: 123456
 - nav-menu with two new entries : "Recipes" and "Restaurants"
 
 ## Technologies used and specification
-- html.
-- css.
-- php.
-- mysql.
-- sass.
-- Javascript.
+- html
+- css
+- php
+- mysql
+- sass
+- Javascript
 - Wordpress
 - JQuery
 
